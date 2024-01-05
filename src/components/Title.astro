@@ -1,0 +1,100 @@
+---
+interface Props {
+  name: string
+  titles: string[]
+  class?: string
+}
+
+const { name, titles, class: className } = Astro.props
+---
+
+<div class={`font-onest w-full font-semibold flex flex-col gap-2 items-center md:items-start ${className}`}>
+  <h3 class="text-foreground/75">{name}</h3>
+  <section class="relative h-10 w-full flex justify-center items-center md:justify-start uppercase font-bold overflow-hidden title">
+    {titles.map((title) => (
+      <h1 class="text-center md:text-start absolute hidden">{title}</h1>
+    ))}
+  </section>
+</div>
+
+<script>
+  const $titleSections = document.querySelectorAll('.title')
+  $titleSections.forEach($titleSection=>{
+    const $titles = $titleSection?.querySelectorAll('h1')
+
+    if($titles?.length) {
+
+      $titles.forEach(($title, i) => {
+        if (i === 0) {
+          $title.classList.add('animated-shown')
+          $title.classList.remove('hidden')
+        }
+        else {
+          $title.classList.add('animated-hidden')
+        }
+      })
+
+      let i = 0
+      setInterval(() => {
+        $titles.item(i).classList.remove('animated-shown')
+        $titles.item(i).classList.add('animated-hidden')
+        i = (i + 1) % $titles.length
+        console.log($titles.item(i).innerText)
+        $titles.item(i).classList.remove('hidden')
+        $titles.item(i).classList.remove('animated-hidden')
+        $titles.item(i).classList.add('animated-shown')
+      }, 4000)
+    }
+  })
+</script>
+
+<style>
+  .animated-shown {
+    animation: show 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .animated-hidden {
+    animation: hide 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes show {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes hide {
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  h1::selection {
+    color: var(--col-background);
+  }
+
+  h1:nth-of-type(3n +1) {
+    color: var(--col-primary);
+  }
+  h1:nth-of-type(3n +1)::selection {
+    background-color: var(--col-primary);
+  }
+
+  h1:nth-of-type(3n +2) {
+    color: var(--col-secondary);
+  }
+  h1:nth-of-type(3n +2)::selection {
+    background-color: var(--col-secondary);
+  }
+
+  h1:nth-of-type(3n +3) {
+    color: var(--col-tertiary);
+  }
+  h1:nth-of-type(3n +3)::selection {
+    background-color: var(--col-tertiary);
+  }
+
+</style>

@@ -1,0 +1,112 @@
+---
+// Supports weights 100-800
+import '@fontsource-variable/sora'
+import '@fontsource-variable/onest'
+
+interface Props {
+  title: string
+  description: string
+  lang: string
+  class?: string
+  htmlClass?: string
+}
+
+const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
+---
+
+<html lang={lang} class={htmlClass}>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description} />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --col-background: #1a1a1a;
+        --col-foreground: #fefefe;
+        --col-focus: #fefefe;
+        --col-primary: #ff4da8;
+        --col-secondary: #b3d0ff;
+        --col-tertiary: #fff080;
+        --col-success: #b3d0ff;
+        --col-warning: #fff080;
+        --col-danger: #ff4da8;
+      }
+      html,
+      body {
+        color-scheme: light dark;
+        margin: 0;
+        padding: 0;
+        font-family: 'Sora Variable', monospace, system-ui, sans-serif;
+        font-weight: 400;
+        font-size: calc(10px + 0.8vmin);
+        line-height: 1.5;
+        text-wrap: pretty;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+        letter-spacing: 0.25em;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        margin-bottom: 1em;
+        letter-spacing: 0.075em;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .selection-primary::selection,
+      .selection-primary *::selection {
+        background-color: var(--col-primary);
+        color: var(--col-background);
+      }
+      .selection-secondary::selection,
+      .selection-secondary *::selection {
+        background-color: var(--col-secondary);
+        color: var(--col-background);
+      }
+      .selection-tertiary::selection,
+      .selection-tertiary *::selection {
+        background-color: var(--col-tertiary);
+        color: var(--col-background);
+      }
+      .selection-quarternary::selection,
+      .selection-quarternary *::selection {
+        background-color: var(--col-quarternary);
+        color: var(--col-background);
+      }
+      .selection-foreground::selection,
+      .selection-foreground *::selection {
+        background-color: var(--col-foreground);
+        color: var(--col-background);
+      }
+
+      .font-sora {
+        font-family: 'Sora Variable', monospace, system-ui, sans-serif;
+      }
+      .font-onest {
+        font-family: 'Onest Variable', monospace, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>

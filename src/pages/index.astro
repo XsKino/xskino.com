@@ -1,0 +1,46 @@
+---
+import Body from '@layouts/Layout.astro'
+import Header from '@components/Header.astro'
+const titles = ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer', 'Math Enjoyer']
+---
+
+<Body
+  title='Andrés Piñón | Kino'
+  lang='es'
+  description='Desarrollador full stack. Amo crear soluciones únicas.'
+  htmlClass='bg-background'
+  class={`
+		min-h-screen w-screen
+		flex flex-col items-center
+		selection-foreground
+	`}>
+  <div
+    class='background-image fixed -z-50 inset-0 bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:4vh_4vh] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000_70%,transparent_110%)]'>
+  </div>
+  <Header name='Kino' titles={titles}>
+    <p>+3 years of experience in software development. I love to create unique solutions.</p>
+    <p class='text-2xl'>I code to make the world a better place.</p>
+  </Header>
+</Body>
+
+<style>
+  @keyframes parallax {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100vh);
+    }
+  }
+
+  .background-image {
+    view-timeline-name: --background-image;
+    animation-timeline: --background-image;
+    animation-name: parallax;
+    animation-timing-function: linear;
+
+    view-timeline-axis: block;
+    animation-range: entry 50vh cover 500vh;
+    animation-fill-mode: both;
+  }
+</style>

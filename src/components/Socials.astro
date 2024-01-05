@@ -1,0 +1,74 @@
+---
+import MailIcon from '@icons/Mail.astro'
+import GitHubIcon from '@icons/GitHub.astro'
+import TwitterIcon from '@icons/Twitter.astro'
+import LinkedInIcon from '@icons/LinkedIn.astro'
+
+const links = [
+  {
+    name: 'github',
+    title: 'Github',
+    href: 'https://github.com/XsKino',
+    mainColor: 'secondary',
+    detailColor: 'tertiary'
+  },
+  {
+    name: 'twitter',
+    title: 'Twitter',
+    href: 'https://twitter.com/andresprza',
+    mainColor: 'primary',
+    detailColor: 'secondary'
+  },
+  {
+    name: 'linkedin',
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/andresprza',
+    mainColor: 'tertiary',
+    detailColor: 'primary'
+  },
+  {
+    name: 'mail',
+    title: 'E-Mail',
+    href: '#contact',
+    mainColor: 'secondary',
+    detailColor: 'tertiary'
+  }
+]
+---
+
+{
+  links.map(({ name, title, href, mainColor, detailColor }) => {
+    const className = `[box-shadow:0.3em_0.3em_0_0_var(--col-${mainColor}),inset_0.3em_0.3em_0_0_var(--col-${detailColor})]`
+    const focus = `focus:[box-shadow:0_0_0_0_var(--col-${mainColor}),inset_6em_3.5em_0_0_var(--col-${detailColor})]`
+    const hover = `hover:[box-shadow:0_0_0_0_var(--col-${mainColor}),inset_6em_3.5em_0_0_var(--col-${detailColor})]`
+
+    return (
+      <a
+        href={href}
+        target={name !== 'mail' ? '_blank' : ''}
+        rel='noopener noreferrer'
+        class={`
+        text-xl relative group outline-none focus:outline-2 focus:outline-foreground size-[3rem] grid place-items-center transition-all
+        ${className} ${focus} ${hover}
+        `}
+        title={`Kino's ${title}`}>
+        {name === 'github' && <GitHubIcon class='icon' />}
+        {name === 'twitter' && <TwitterIcon class='icon' />}
+        {name === 'linkedin' && <LinkedInIcon class='icon' />}
+        {name === 'mail' && <MailIcon class='icon' />}
+      </a>
+    )
+  })
+}
+
+<style>
+  .icon {
+    transition: all 0.3s ease-in-out;
+    transform: translate(0.1em, 0.1em);
+  }
+  a:hover .icon,
+  a:focus .icon {
+    transform: translate(0);
+    color: var(--col-background);
+  }
+</style>

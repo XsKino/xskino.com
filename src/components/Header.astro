@@ -1,0 +1,42 @@
+---
+import Avatar from '@components/Avatar.astro'
+import Title from '@components/Title.astro'
+import Socials from '@components/Socials.astro'
+
+interface Props {
+  name: string
+  titles: string[]
+}
+
+const { name, titles } = Astro.props
+---
+
+<!-- mobile -->
+<header class='h-[80svh] flex flex-col justify-center items-center gap-8 md:hidden'>
+  <div class='flex gap-4'>
+    <Socials />
+  </div>
+  <Avatar class='size-32 md:size-48' />
+  <div class='w-full'>
+    <Title name={name} titles={titles} />
+  </div>
+  <div class='max-w-[80ch] text-center p-8 text-lg'>
+    <slot />
+  </div>
+</header>
+
+<!-- desktop -->
+<header class='h-[80svh] hidden md:flex flex-col items-center justify-center px-10 max-w-[88ch]'>
+  <div class='flex gap-8 w-full'>
+    <Avatar class='size-32 md:size-48' />
+    <div class='flex-1 flex flex-col justify-center gap-4'>
+      <Title name={name} titles={titles} />
+      <div class='flex gap-4'>
+        <Socials />
+      </div>
+    </div>
+  </div>
+  <div class='text-center p-8 text-lg'>
+    <slot />
+  </div>
+</header>
