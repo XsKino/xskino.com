@@ -23,7 +23,7 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
       <!-- glow -->
       <div class='absolute bg-primary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-10'></div>
       <!-- Favorite projects -->
-      <MainProjectsWithSkeleton client:load projects={mainProjects} />
+      <MainProjectsWithSkeleton client:only='react' projects={mainProjects} />
     </div>
     <div class={`${!otherProjects?.length && 'hidden'} flex flex-col gap-10`}>
       <h3 class='text-center text-background selection-foreground'>Other projects</h3>
