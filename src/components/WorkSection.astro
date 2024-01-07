@@ -41,5 +41,5 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
 <section
   class={`text-primary selection-primary p-10 pt-20 max-w-screen-md ${!jobsTimeline?.length && 'hidden'}`}>
   <h2 class='text-center'>Job experience</h2>
-  <Timeline ascend color='primary' client:visible timeline={jobsTimeline} />
+  <Timeline ascend color='primary' client:only='react' timeline={jobsTimeline} />
 </section>
