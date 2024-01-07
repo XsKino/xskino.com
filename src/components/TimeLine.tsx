@@ -73,10 +73,10 @@ export default function TimeLine({
           radius='none'
           name='toggle timeline full height'
           style={{
-            color: `var(--col-${bgColor ?? color ?? 'foreground'})`,
+            color: `var(--col-${bgColor ?? 'background'})`,
             backgroundColor: `var(--col-${color ?? 'background'}`
           }}
-          className='uppercase p-8 self-center font-semibold flex gap-4 min-w-[20ch] justify-center items-center'
+          className=' p-8 self-center font-semibold flex gap-4 min-w-[20ch] justify-center items-center'
           onPress={() => {
             setOpen(!open)
           }}>

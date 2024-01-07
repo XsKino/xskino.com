@@ -1,6 +1,6 @@
 ---
-import MainProject from '@/src/components/MainProject.tsx'
-import OtherProject from '@components/Project.astro'
+import MainProjectsWithSkeleton from '@components/MainProjectsWithSkeleton'
+import OtherProject from '@/src/components/Project'
 import Timeline from '@components/TimeLine'
 
 import type { Project, TimelineItem } from '../types/app'
@@ -14,38 +14,32 @@ interface Props {
 const { mainProjects, otherProjects, jobsTimeline } = Astro.props
 ---
 
-<h1 class='uppercase text-primary selection-primary text-center'>Check Out My Work!</h1>
+<h1 class='text-primary selection-primary text-center'>Check Out My Work!</h1>
 
 <div class='mt-32 md:mt-64 relative flex w-full bg-primary justify-center'>
   <!-- actual work section -->
-  <section class='flex flex-col gap-20 p-10 w-full max-w-screen-md text-background'>
+  <section class='flex flex-col gap-20 p-10 pb-20 w-full max-w-screen-md text-background'>
     <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
       <!-- glow -->
-      <div class='absolute bg-primary blur-3xl rounded-full aspect-square w-full -top-16 md:-top-32 -z-10'>
-      </div>
+      <div class='absolute bg-primary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-10'></div>
       <!-- Favorite projects -->
-      {
-        mainProjects?.map((project, i) => (
-          <MainProject
-            client:only='react'
-            project={project}
-            class={`${i % 2 === 0 ? 'flex-1' : 'flex-[1.5]'}`}
-          />
-        ))
-      }
+      <MainProjectsWithSkeleton client:load projects={mainProjects} />
     </div>
-    <div
-      class={`
-      gap-4 
-      ${!otherProjects?.length && 'hidden'}
-      border flex flex-wrap 
-    `}>
-      <!-- Other projects -->
-      {otherProjects?.map(project => <OtherProject project={project} />)}
-    </div>
-    <div class={` ${!jobsTimeline?.length && 'hidden'}`}>
-      <h2 class='uppercase text-center'>Job experience</h2>
-      <Timeline ascend bgColor='primary' client:visible timeline={jobsTimeline} />
+    <div class={`${!otherProjects?.length && 'hidden'} flex flex-col gap-10`}>
+      <h3 class='text-center text-background selection-foreground'>Other projects</h3>
+      <div
+        class={`
+        gap-4 
+        flex flex-wrap items-stretch
+      `}>
+        <!-- Other projects -->
+        {otherProjects?.map(project => <OtherProject client:only='react' project={project} />)}
+      </div>
     </div>
   </section>
 </div>
+<section
+  class={`text-primary selection-primary p-10 pt-20 max-w-screen-md ${!jobsTimeline?.length && 'hidden'}`}>
+  <h2 class='text-center'>Job experience</h2>
+  <Timeline ascend color='primary' client:visible timeline={jobsTimeline} />
+</section>

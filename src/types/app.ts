@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 export type Project = {
   name: string
+  brief?: string
   description: string
   image: string
   technologies: Technology[]
