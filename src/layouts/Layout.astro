@@ -23,6 +23,9 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
     <meta name='description' content={description} />
     <title>{title}</title>
     <style is:global>
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
       :root {
         --col-background: #1a1a1a;
         --col-foreground: #fefefe;
@@ -44,6 +47,12 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
         font-size: calc(10px + 0.8vmin);
         line-height: 1.5;
         text-wrap: pretty;
+        overflow: hidden;
+      }
+      html {
+        height: 100svh;
+        width: 100vw;
+        overflow-y: auto;
       }
       h1,
       h2,
@@ -72,6 +81,12 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
         height: auto;
       }
 
+      .selection-foreground::selection,
+      .selection-foreground *::selection {
+        background-color: var(--col-foreground);
+        color: var(--col-background);
+      }
+
       .selection-primary::selection,
       .selection-primary *::selection {
         background-color: var(--col-primary);
@@ -87,13 +102,8 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
         background-color: var(--col-tertiary);
         color: var(--col-background);
       }
-      .selection-quarternary::selection,
-      .selection-quarternary *::selection {
-        background-color: var(--col-quarternary);
-        color: var(--col-background);
-      }
-      .selection-foreground::selection,
-      .selection-foreground *::selection {
+      .selection-foreground-important::selection,
+      .selection-foreground-important *::selection {
         background-color: var(--col-foreground);
         color: var(--col-background);
       }
@@ -103,6 +113,10 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
       }
       .font-onest {
         font-family: 'Onest Variable', monospace, system-ui, sans-serif;
+      }
+
+      .overflow-fade {
+        -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
       }
     </style>
   </head>

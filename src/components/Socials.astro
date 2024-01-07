@@ -9,8 +9,8 @@ const links = [
     name: 'github',
     title: 'Github',
     href: 'https://github.com/XsKino',
-    mainColor: 'secondary',
-    detailColor: 'tertiary'
+    mainColor: 'tertiary',
+    detailColor: 'primary'
   },
   {
     name: 'twitter',
@@ -38,24 +38,27 @@ const links = [
 
 {
   links.map(({ name, title, href, mainColor, detailColor }) => {
-    const className = `[box-shadow:0.3em_0.3em_0_0_var(--col-${mainColor}),inset_0.3em_0.3em_0_0_var(--col-${detailColor})]`
-    const focus = `focus:[box-shadow:0_0_0_0_var(--col-${mainColor}),inset_6em_3.5em_0_0_var(--col-${detailColor})]`
-    const hover = `hover:[box-shadow:0_0_0_0_var(--col-${mainColor}),inset_6em_3.5em_0_0_var(--col-${detailColor})]`
-
     return (
       <a
+        style={{
+          '--social-main-color': `var(--col-${mainColor ?? 'foreground'})`,
+          '--social-detail-color': `var(--col-${detailColor ?? 'foreground'})`
+        }}
         href={href}
         target={name !== 'mail' ? '_blank' : ''}
         rel='noopener noreferrer'
         class={`
         text-xl relative group outline-none focus:outline-2 focus:outline-foreground size-[3rem] grid place-items-center transition-all
-        ${className} ${focus} ${hover}
+        [box-shadow:0.3em_0.3em_0_0_var(--social-detail-color),inset_0.3em_0.3em_0_0_var(--social-main-color)]
+        hover:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
+        focus:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
         `}
         title={`Kino's ${title}`}>
         {name === 'github' && <GitHubIcon class='icon' />}
         {name === 'twitter' && <TwitterIcon class='icon' />}
         {name === 'linkedin' && <LinkedInIcon class='icon' />}
         {name === 'mail' && <MailIcon class='icon' />}
+        {!name && title}
       </a>
     )
   })

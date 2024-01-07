@@ -13,7 +13,8 @@
       "@styles/*": ["src/styles/*"],
       "@icons/*": ["src/icons/*"],
       "@assets/*": ["src/assets/*"],
-      "@data/*": ["src/data/*"]
+      "@data/*": ["src/data/*"],
+      "@types/*": ["src/types/*"]
     }
   }
 }

@@ -1,7 +1,116 @@
 ---
 import Body from '@layouts/Layout.astro'
 import Header from '@components/Header.astro'
-const titles = ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer', 'Math Enjoyer']
+import WorkSection from '@components/WorkSection.astro'
+
+import type { Project, TimelineItem } from '../types/app'
+
+// titles.length should be multiple of 3
+const titles = ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer' /* 'Math Enjoyer' */]
+
+const mainProjects: Project[] = [
+  {
+    name: 'Si',
+    description: `
+    hola
+    `,
+    image: 'web-lab.jpg',
+    github: 'aksjda',
+    technologies: ['MySQL', 'Vuejs', 'Laravel']
+  },
+  {
+    name: 'Web Lab',
+    description: `
+    Inspired by the 50 Days 50 Projects Challenge, I decided to create a website with a collection of web experiments where you can take a look at what's possible to do with web technologies.
+    `,
+    image: 'web-lab.jpg',
+    github: 'https://github.com/XsKino/web-lab',
+    link: 'https://xs-web-lab.vercel.app/',
+    technologies: ['Astro', 'React', 'TailwindCSS']
+  },
+  {
+    name: 'No',
+    description: `
+    adios
+    `,
+    image: 'web-lab.jpg',
+    technologies: ['Nodejs', 'Kubernetes', 'TypeScript']
+  }
+]
+
+const otherProjects: Project[] = [
+  {
+    name: 'uno',
+    description: `
+    hola
+    `,
+    image: 'uwu.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    name: 'yadayadayadaowowo',
+    description: `
+    reeeeeeeeeeeeeeeee
+    `,
+    image: 'ewe.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    name: 'No',
+    description: `
+    adios
+    `,
+    image: 'owo.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    name: 'mememmeme',
+    description: `
+    hola
+    `,
+    image: 'uwu.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    name: 'dos',
+    description: `
+    reeeeeeeeeeeeeeeee
+    `,
+    image: 'ewe.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    name: 'laksjdlkas',
+    description: `
+    adios
+    `,
+    image: 'owo.png',
+    technologies: ['React', 'TailwindCSS', 'TypeScript']
+  }
+]
+
+const jobsTimeline: TimelineItem[] = [
+  {
+    date: '2020',
+    title: 'yadayadayada',
+    body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    date: '2020',
+    title: 'yadayadayada',
+    body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    date: '2020',
+    title: 'yadayadayada',
+    body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    date: '2020',
+    title: 'yadayadayada',
+    body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+]
 ---
 
 <Body
@@ -9,11 +118,7 @@ const titles = ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'D
   lang='es'
   description='Desarrollador full stack. Amo crear soluciones únicas.'
   htmlClass='bg-background'
-  class={`
-		min-h-screen w-screen
-		flex flex-col items-center
-		selection-foreground
-	`}>
+  class='flex flex-col items-center selection-foreground'>
   <div
     class='background-image fixed -z-50 inset-0 bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:4vh_4vh] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000_70%,transparent_110%)]'>
   </div>
@@ -21,6 +126,7 @@ const titles = ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'D
     <p>+3 years of experience in software development. I love to create unique solutions.</p>
     <p class='text-2xl'>I code to make the world a better place.</p>
   </Header>
+  <WorkSection mainProjects={mainProjects} otherProjects={otherProjects} jobsTimeline={jobsTimeline} />
 </Body>
 
 <style>
