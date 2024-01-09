@@ -26,6 +26,7 @@ const { education } = Astro.props
       </div>
     </div>
     <Introduction />
-    <TimeLine ascend bgColor='secondary' timeline={education} />
+    <h2 class='text-center'>Education</h2>
+    <TimeLine client:only='react' ascend bgColor='secondary' timeline={education} />
   </section>
 </div>
