@@ -1,0 +1,31 @@
+---
+import Introduction from '@components/Introduction.astro'
+import TimeLine from '@components/TimeLine'
+
+import type { TimelineItem } from '../types/app'
+
+interface Props {
+  education: TimelineItem[]
+}
+
+const { education } = Astro.props
+---
+
+<h1 class='text-secondary selection-secondary text-center'>Get to know me!</h1>
+
+<div class='md:mt-32 relative flex w-full bg-secondary justify-center'>
+  <!-- actual work section -->
+  <section class='flex flex-col gap-20 px-10 pb-20 w-full max-w-screen-md text-background'>
+    <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
+      <!-- glow -->
+      <div class='absolute bg-secondary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-10'>
+      </div>
+      <!-- Section Banner -->
+      <div class='bg-tertiary w-4/5 aspect-video flex flex-col items-center'>
+        <img src='' alt='' class='object-fit' />
+      </div>
+    </div>
+    <Introduction />
+    <TimeLine ascend bgColor='secondary' timeline={education} />
+  </section>
+</div>

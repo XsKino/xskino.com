@@ -2,6 +2,7 @@
 import Body from '@layouts/Layout.astro'
 import Header from '@components/Header.astro'
 import WorkSection from '@components/WorkSection.astro'
+import AboutMeSection from '@components/AboutMeSection.astro'
 
 import type { Project, TimelineItem } from '../types/app'
 
@@ -115,6 +116,14 @@ const jobsTimeline: TimelineItem[] = [
     body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   }
 ]
+
+const educationTimeLine: TimelineItem[] = [
+  {
+    date: '2020',
+    title: 'yadayadayada',
+    body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+]
 ---
 
 <Body
@@ -130,8 +139,11 @@ const jobsTimeline: TimelineItem[] = [
     <p>+3 years of experience in software development. I love to create unique solutions.</p>
     <p class='text-2xl'>I code to make the world a better place.</p>
   </Header>
-  <WorkSection mainProjects={mainProjects} otherProjects={otherProjects} jobsTimeline={jobsTimeline} />
-  <div class='h-screen'></div>
+  <main class='flex flex-col gap-40 w-screen items-center'>
+    <WorkSection mainProjects={mainProjects} otherProjects={otherProjects} jobsTimeline={jobsTimeline} />
+    <AboutMeSection education={educationTimeLine} />
+    <div class='h-screen'></div>
+  </main>
 </Body>
 
 <style>

@@ -16,7 +16,7 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
 
 <h1 class='text-primary selection-primary text-center'>Check Out My Work!</h1>
 
-<div class='mt-32 md:mt-64 relative flex w-full bg-primary justify-center'>
+<div class='md:mt-32 relative flex w-full bg-primary justify-center'>
   <!-- actual work section -->
   <section class='flex flex-col gap-20 p-10 pb-20 w-full max-w-screen-md text-background'>
     <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
@@ -39,7 +39,9 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
   </section>
 </div>
 <section
-  class={`text-primary selection-primary p-10 pt-20 max-w-screen-md ${!jobsTimeline?.length && 'hidden'}`}>
+  class={`text-primary selection-primary flex flex-col p-10 gap-10 md:pt-20 max-w-screen-md ${
+    !jobsTimeline?.length && 'hidden'
+  }`}>
   <h2 class='text-center'>Job experience</h2>
   <Timeline ascend color='primary' client:only='react' timeline={jobsTimeline} />
 </section>

@@ -35,26 +35,36 @@ export default function ProjectModal({
                   <img src={`/img/projects/${project.image}`} alt={`Image of project  ${project.name}`} />
                   <div className='absolute bottom-0 w-full flex gap-4 p-2 text-xl text-semibold select-none text-foreground'>
                     {project.github != null && (
-                      <a
+                      <Button
                         title='GitHub repository'
-                        href={project.github}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='cursor-pointer opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
-                        <GitHubFillIcon />
-                        <label className='text-sm'>GitHub repo</label>
-                      </a>
-                    )}
-                    {project.link != null && (
-                      <a
-                        title='Live project'
+                        as='a'
                         href={project.link}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='cursor-pointer opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
-                        <ExternalLinkIcon />
-                        <label className='text-sm'>Live Project</label>
-                      </a>
+                        startContent={
+                          <i className='text-lg'>
+                            <GitHubFillIcon />
+                          </i>
+                        }
+                        className='cursor-pointer text-medium text-foreground opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
+                        GitHub Repo
+                      </Button>
+                    )}
+                    {project.link != null && (
+                      <Button
+                        title='Live project'
+                        as='a'
+                        href={project.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        startContent={
+                          <i className='text-lg'>
+                            <ExternalLinkIcon />
+                          </i>
+                        }
+                        className='cursor-pointer text-medium text-foreground opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
+                        Live Project
+                      </Button>
                     )}
                   </div>
                 </div>
