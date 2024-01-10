@@ -40,4 +40,8 @@ export type TimelineItem = {
   date: string
   title: string
   body: string
+  links?: Array<{
+    text: string
+    url: string
+  }>
 }

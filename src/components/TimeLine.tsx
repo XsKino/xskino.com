@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ChevronDownIcon from '@icons/jsx/ChevronDown'
 import ArrowFromTopIcon from '@icons/jsx/ArrowFromTop'
+import ExternalLinkIcon from '@icons/jsx/ExternalLink'
 
 import { Button } from '@nextui-org/react'
 
@@ -65,6 +66,26 @@ export default function TimeLine({
               <h4>{item.title}</h4>
             </div>
             <p>{item.body}</p>
+            {item.links?.map((link, i) => (
+              <Button
+                key={`timeline-link-${i}-${link.text}`}
+                as='a'
+                href={link.url}
+                target='_blank'
+                radius='none'
+                rel='noopener noreferrer'
+                style={{
+                  color: `var(--col-${color ?? 'background'})`,
+                  // backgroundColor: `var(--col-${color ?? 'background'}`,
+                  borderColor: `var(--col-${color ?? 'background'}`
+                }}
+                className='p-2 px-0 text-xs w-min flex bg-transparent border-b-2'>
+                {link.text}
+                <i className='text-medium'>
+                  <ExternalLinkIcon />
+                </i>
+              </Button>
+            ))}
           </article>
         ))}
       </section>
