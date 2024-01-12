@@ -79,7 +79,7 @@ export default function EmailForm(): JSX.Element {
                 name='user_name'
                 id='name'
                 required
-                placeholder='I want to know your name'
+                placeholder='Your name goes here'
               />
             </div>
             <div>

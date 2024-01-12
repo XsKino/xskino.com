@@ -146,6 +146,11 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
         background-color: currentColor;
         border-radius: 0.25em;
       }
+
+      .clippy {
+        clip-path: polygon(0 -100%, 100% -100%, 100% calc(100% - 8rem), 50% 100%, 0 calc(100% - 8rem));
+        padding-bottom: 7rem;
+      }
     </style>
   </head>
   <body class={bodyClass}>

@@ -2,6 +2,7 @@
 import MainProjectsWithSkeleton from '@components/MainProjectsWithSkeleton'
 import OtherProject from '@/src/components/Project'
 import Timeline from '@components/TimeLine'
+import ResumeButton from '@components/ResumeButton'
 
 import type { Project, TimelineItem } from '../types/app'
 
@@ -16,7 +17,7 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
 
 <h1 class='text-primary selection-primary text-center'>Check Out My Work!</h1>
 
-<div class='md:mt-32 relative flex w-full bg-primary justify-center'>
+<div class='md:mt-32 relative flex w-full bg-primary justify-center clippy min-h-96'>
   <!-- actual work section -->
   <section class='flex flex-col gap-20 p-10 pb-20 w-full standard-container text-background'>
     <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
@@ -42,6 +43,9 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
   class={`text-primary selection-primary flex flex-col p-10 gap-10 md:pt-20 standard-container ${
     !jobsTimeline?.length && 'hidden'
   }`}>
-  <h2 class='text-center'>Job experience</h2>
+  <div class='flex flex-col gap-6 items-center'>
+    <h2 class='text-center'>Job experience</h2>
+    <ResumeButton client:only='react' />
+  </div>
   <Timeline ascend color='primary' client:only='react' timeline={jobsTimeline} />
 </section>
