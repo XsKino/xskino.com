@@ -12,11 +12,11 @@ const { name, titles } = Astro.props
 ---
 
 <!-- mobile -->
-<header class='h-[80svh] flex flex-col justify-center items-center gap-8 md:hidden'>
+<header class='flex flex-col justify-center items-center py-24 gap-8 md:hidden'>
   <div class='flex gap-4'>
     <Socials />
   </div>
-  <Avatar class='size-32 md:size-48' />
+  <Avatar class='size-96' />
   <div class='w-full'>
     <Title name={name} titles={titles} />
   </div>
@@ -26,17 +26,17 @@ const { name, titles } = Astro.props
 </header>
 
 <!-- desktop -->
-<header class='min-h-[80svh] hidden md:flex flex-col items-center justify-center px-10 max-w-[88ch]'>
-  <div class='flex gap-8 w-full'>
-    <Avatar class='size-32 md:size-48' />
-    <div class='flex-1 flex flex-col justify-center gap-4'>
+<header class='min-h-[80vh] hidden md:flex flex-col items-center justify-center px-10 max-w-[88ch]'>
+  <div class='flex gap-8 pt-12 w-full items-center'>
+    <Avatar class='size-[30rem]' />
+    <div class='flex-1 flex flex-col justify-center gap-4 min-w-max'>
       <Title name={name} titles={titles} />
       <div class='flex gap-4'>
         <Socials />
       </div>
     </div>
   </div>
-  <div class='text-center p-8 text-lg'>
+  <div class='text-center p-8 md:py-24 text-lg'>
     <slot />
   </div>
 </header>
