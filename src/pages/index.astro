@@ -3,6 +3,9 @@ import Body from '@layouts/Layout.astro'
 import Header from '@components/Header.astro'
 import WorkSection from '@components/WorkSection.astro'
 import AboutMeSection from '@components/AboutMeSection.astro'
+import ContactSection from '@components/ContactSection.astro'
+
+import { socialLinks } from '@data/app'
 
 import type { Project, TimelineItem } from '../types/app'
 
@@ -186,7 +189,7 @@ const educationTimeLine: TimelineItem[] = [
   <main class='flex flex-col gap-40 w-screen items-center'>
     <WorkSection mainProjects={mainProjects} otherProjects={otherProjects} jobsTimeline={jobsTimeline} />
     <AboutMeSection education={educationTimeLine} />
-    <div class='h-screen'></div>
+    <ContactSection links={socialLinks} />
   </main>
 </Body>
 

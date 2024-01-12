@@ -45,3 +45,11 @@ export type TimelineItem = {
     url: string
   }>
 }
+
+export type SocialLink = {
+  name: string
+  title: string
+  url: string
+  mainColor?: string
+  detailColor?: string
+}

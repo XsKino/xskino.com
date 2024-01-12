@@ -17,7 +17,7 @@ export default function ProjectComponent({ project, class: className }: Props): 
       <button
         onClick={onOpen}
         className={`
-          ${className} p-2 md:p-4 px-3 md:px-6 flex md:flex-col justify-between border border-background hover:text-primary hover:bg-background
+          ${className} p-2 md:p-4 px-3 md:px-6 flex md:flex-col justify-between border-2 border-background/70 hover:border-transparent hover:bg-background hover:text-primary rounded-xl
           min-w-max max-w-full grow whitespace-nowrap text-xs md:text-sm cursor-pointer transition-all [transition-duration:100ms] items-center group
         `}>
         <h6>{project.brief ?? project.name}</h6>

@@ -36,7 +36,6 @@ const { name, titles, class: className } = Astro.props
         $titles.item(i).classList.remove('animated-shown')
         $titles.item(i).classList.add('animated-hidden')
         i = (i + 1) % $titles.length
-        console.log($titles.item(i).innerText)
         $titles.item(i).classList.remove('hidden')
         $titles.item(i).classList.remove('animated-hidden')
         $titles.item(i).classList.add('animated-shown')

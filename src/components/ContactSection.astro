@@ -1,0 +1,49 @@
+---
+import EmailForm from '@components/EmailForm'
+import GitHubIcon from '@icons/GitHub.astro'
+import TwitterIcon from '@icons/Twitter.astro'
+import LinkedInIcon from '@icons/LinkedIn.astro'
+import type { SocialLink } from '../types/app'
+
+interface Props {
+  links: SocialLink[]
+}
+
+const { links } = Astro.props
+---
+
+<h1 id='contact' class='text-tertiary selection-tertiary text-center'>Let's get in touch!</h1>
+
+<div class='md:mt-32 relative flex w-full bg-tertiary justify-center'>
+  <!-- actual work section -->
+  <section class='flex flex-col gap-20 px-10 pb-20 w-full standard-container text-background'>
+    <div class='flex justify-evenly items-center gap-4 -mt-16 md:-mt-32 w-[150%] max-w-[90vw] self-center'>
+      <!-- glow -->
+      <div class='absolute bg-tertiary blur-3xl [border-radius:50%] size-full -top-32 md:-top-32 -z-10'></div>
+      <!-- Section Banner -->
+      <EmailForm client:only='react' />
+    </div>
+    <div class='flex gap-4 items-center'>
+      <p class='flex-1'>© 2024 XsKino</p>
+      {
+        links.map(({ name, title, url }) => {
+          return (
+            name !== 'mail' && (
+              <a
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='p-2 text-background/70 hover:text-background'
+                title={`Kino's ${title}`}>
+                {name === 'github' && <GitHubIcon class='icon' />}
+                {name === 'twitter' && <TwitterIcon class='icon' />}
+                {name === 'linkedin' && <LinkedInIcon class='icon' />}
+                {!name && title}
+              </a>
+            )
+          )
+        })
+      }
+    </div>
+  </section>
+</div>

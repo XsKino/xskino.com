@@ -76,7 +76,6 @@ export default function TimeLine({
                 rel='noopener noreferrer'
                 style={{
                   color: `var(--col-${color ?? 'background'})`,
-                  // backgroundColor: `var(--col-${color ?? 'background'}`,
                   borderColor: `var(--col-${color ?? 'background'}`
                 }}
                 className='p-2 px-0 text-xs w-min flex bg-transparent border-b-2'>
@@ -91,22 +90,27 @@ export default function TimeLine({
       </section>
       {alwaysFull ?? false ? null : (
         <Button
-          radius='none'
+          radius='lg'
+          // variant={typeof color !== 'undefined' ? 'light' : 'ghost'}
+          variant='light'
           name='toggle timeline full height'
-          style={{
-            color: `var(--col-${bgColor ?? 'background'})`,
-            backgroundColor: `var(--col-${color ?? 'background'}`
-          }}
-          className=' p-8 self-center font-semibold flex gap-4 min-w-[20ch] justify-center items-center'
+          color={color === 'tertiary' ? 'warning' : color}
+          className={
+            typeof color !== 'undefined'
+              ? 'self-center'
+              : 'self-center hover:[background-color:transparent!important] border-2 border-transparent hover:border-background'
+          }
           onPress={() => {
             setOpen(!open)
-          }}>
+          }}
+          endContent={
+            <i
+              style={{ transform: `rotate(${open ? '180deg' : '0deg'})` }}
+              className={`transition-all grid place-items-center`}>
+              <ChevronDownIcon />
+            </i>
+          }>
           {open ? 'Show less' : 'Show more'}
-          <i
-            style={{ transform: `rotate(${open ? '180deg' : '0deg'})` }}
-            className={`transition-all grid place-items-center`}>
-            <ChevronDownIcon />
-          </i>
         </Button>
       )}
     </div>

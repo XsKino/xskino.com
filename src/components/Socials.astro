@@ -4,47 +4,18 @@ import GitHubIcon from '@icons/GitHub.astro'
 import TwitterIcon from '@icons/Twitter.astro'
 import LinkedInIcon from '@icons/LinkedIn.astro'
 
-const links = [
-  {
-    name: 'github',
-    title: 'Github',
-    href: 'https://github.com/XsKino',
-    mainColor: 'tertiary',
-    detailColor: 'primary'
-  },
-  {
-    name: 'twitter',
-    title: 'Twitter',
-    href: 'https://twitter.com/andresprza',
-    mainColor: 'primary',
-    detailColor: 'secondary'
-  },
-  {
-    name: 'linkedin',
-    title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/andresprza',
-    mainColor: 'tertiary',
-    detailColor: 'primary'
-  },
-  {
-    name: 'mail',
-    title: 'E-Mail',
-    href: '#contact',
-    mainColor: 'secondary',
-    detailColor: 'tertiary'
-  }
-]
+import { socialLinks as links } from '@/src/data/app'
 ---
 
 {
-  links.map(({ name, title, href, mainColor, detailColor }) => {
+  links.map(({ name, title, url, mainColor, detailColor }) => {
     return (
       <a
         style={{
           '--social-main-color': `var(--col-${mainColor ?? 'foreground'})`,
           '--social-detail-color': `var(--col-${detailColor ?? 'foreground'})`
         }}
-        href={href}
+        href={url}
         target={name !== 'mail' ? '_blank' : ''}
         rel='noopener noreferrer'
         class={`
