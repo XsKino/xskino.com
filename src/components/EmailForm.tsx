@@ -21,11 +21,12 @@ export default function EmailForm(): JSX.Element {
     setLoading(true)
 
     try {
+      console.log(process.env.PUBLIC_EMAILJS_API_KEY)
       await emailjs.sendForm(
         'kino_portfolio_email',
         'kino_portfolio_template',
         form.current ?? '',
-        import.meta.env.PUBLIC_EMAILJS_API_KEY
+        process.env.PUBLIC_EMAILJS_API_KEY as string
       )
       form.current?.reset()
       toast.success('Message sent!')
