@@ -21,7 +21,6 @@ export default function EmailForm(): JSX.Element {
     setLoading(true)
 
     try {
-      console.log(import.meta.env.PUBLIC_EMAILJS_API_KEY)
       await emailjs.sendForm(
         'kino_portfolio_email',
         'kino_portfolio_template',
