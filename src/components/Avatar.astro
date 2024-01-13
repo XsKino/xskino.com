@@ -3,9 +3,9 @@
 ---
 
 <div class={`relative grid place-items-center aspect-square -mt-14 ${Astro.props.class}`}>
-  <div class='absolute size-2/5 top-[25%] bg-foreground rotate-45 shadow-[0_0_2rem_#fffa]'></div>
+  <div class='absolute size-2/5 top-[25%] bg-foreground rotate-45'></div>
   <div
-    class='absolute avatar-bg size-1/2 bottom-[9.05%] md:bottom-[9.5%] border-3 border-foreground rotate-45 shadow-[0_0_2rem_#fffa,_inset_0_0_3rem_#fffa]'>
+    class='absolute avatar-bg size-1/2 bottom-[9.05%] md:bottom-[9.5%] border-3 border-foreground rotate-45'>
   </div>
   <div class='absolute inset-0 image-container'>
     <img src='/img/avatar/avatar-1.png' alt='Imagen de Kino' class='size-full' />
@@ -36,6 +36,5 @@
 
   .avatar-bg {
     animation: avatarbg 5s infinite;
-    background: radial-gradient(circle, #ff4da8 0%, #b3cfff 100%);
   }
 </style>
