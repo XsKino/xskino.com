@@ -1,6 +1,6 @@
 ---
-import MainProjectsWithSkeleton from '@components/MainProjectsWithSkeleton'
-import OtherProject from '@/src/components/Project'
+import MainProject from '@components/MainProject.astro'
+import OtherProject from '@components/Project'
 import Timeline from '@components/TimeLine'
 import ResumeButton from '@components/ResumeButton'
 
@@ -22,9 +22,13 @@ const { mainProjects, otherProjects, jobsTimeline } = Astro.props
   <section class='flex flex-col gap-20 p-10 pb-20 w-full standard-container text-background'>
     <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
       <!-- glow -->
-      <div class='absolute bg-primary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-10'></div>
+      <div class='absolute bg-primary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-50'></div>
       <!-- Favorite projects -->
-      <MainProjectsWithSkeleton client:only='react' projects={mainProjects} />
+      {
+        mainProjects?.map((project, i) => (
+          <MainProject project={project} class={`${i % 2 === 0 ? 'flex-1' : 'flex-[1.5]'}`} />
+        ))
+      }
     </div>
     <div class={`${!otherProjects?.length && 'hidden'} flex flex-col gap-10`}>
       <h3 class='text-center text-background selection-foreground'>Other projects</h3>

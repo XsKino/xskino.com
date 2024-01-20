@@ -36,7 +36,6 @@ export default function ProjectModal({
                   <div className='absolute bottom-0 w-full flex gap-4 p-2 text-xl text-semibold select-none text-foreground'>
                     {project.github != null && (
                       <Button
-                        title='GitHub repository'
                         as='a'
                         href={project.link}
                         target='_blank'
@@ -52,7 +51,6 @@ export default function ProjectModal({
                     )}
                     {project.link != null && (
                       <Button
-                        title='Live project'
                         as='a'
                         href={project.link}
                         target='_blank'

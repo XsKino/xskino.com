@@ -14,6 +14,7 @@ interface Props {
 
 export default function MainProject({ class: className, project }: Props): JSX.Element {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
   return (
     <>
       {/* Desktop */}

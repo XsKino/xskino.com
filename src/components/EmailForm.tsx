@@ -50,7 +50,7 @@ export default function EmailForm(): JSX.Element {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className='bg-background shadow-xl shadow-black/40 w-4/5 flex flex-col md:flex-row-reverse gap-6 p-6 rounded-xl slection-tertiary text-tertiary'>
+      className='bg-background shadow-xl shadow-black/40 flex flex-col md:flex-row-reverse gap-6 p-6 rounded-xl slection-tertiary text-tertiary'>
       <div className='flex flex-col justify-between h-64 gap-6 flex-1 text-xs'>
         <div className='group'>
           <p className='text-foreground/50'>This is my e-mail</p>
