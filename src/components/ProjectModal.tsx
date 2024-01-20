@@ -20,7 +20,7 @@ export default function ProjectModal({
   project: Project
 }): JSX.Element {
   return (
-    <Modal backdrop='blur' className='bg-transparent' isOpen={isOpen} onOpenChange={onOpenChange}>
+    <Modal backdrop='opaque' className='bg-transparent' isOpen={isOpen} onOpenChange={onOpenChange}>
       <ModalContent>
         {onClose => (
           <div className='flex flex-col items-center overflow-hidden'>

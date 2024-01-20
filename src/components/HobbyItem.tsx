@@ -37,13 +37,13 @@ export default function HobbyItem({ className, title, children, image, href }: P
             variant='ghost'
             size='sm'
             as='a'
+            title={`See more about ${title}`}
+            aria-label={`See more about ${title}`}
             href={href}
-            // isIconOnly
             endContent={<ExternalLinkIcon />}
             target='_blank'
-            rel='noopener noreferrer'>
-            <p className='md:hidden'>See more</p>
-          </Button>
+            isIconOnly
+            rel='noopener noreferrer'></Button>
         </div>
       </div>
     </div>

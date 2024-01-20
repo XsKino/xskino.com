@@ -50,7 +50,30 @@ const { title, description, lang, class: bodyClass, htmlClass } = Astro.props
         line-height: 1.5;
         text-wrap: pretty;
         overflow: hidden;
+        /* Firefox Scrollbar */
+        scrollbar-width: thin;
+        scrollbar-color: #fff4 #fff2;
       }
+
+      body::-webkit-scrollbar {
+        width: 0.9rem;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: #fff2;
+      }
+      body::-webkit-scrollbar-track:hover {
+        background: #fff3;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: #fff3;
+      }
+
+      body::-webkit-scrollbar-thumb:active {
+        background: var(--col-primary);
+      }
+
       html {
         height: 100svh;
         width: 100vw;

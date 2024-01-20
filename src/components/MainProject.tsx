@@ -28,7 +28,7 @@ export default function MainProject({ class: className, project }: Props): JSX.E
         <img src={`/img/projects/${project.image}`} alt={`Image of project  ${project.name}`} />
         <div className='min-h-fit flex-1 flex flex-col justify-between p-4 bg-gradient-to-t from-primary/25 via-transparent to-transparent'>
           <div className='flex justify-between items-center pb-2'>
-            <h5 className='font-semibold text-xl '>{project.name}</h5>
+            <h2 className='font-semibold text-xl '>{project.name}</h2>
 
             <div className='flex text-2xl gap-4 text-foreground select-none'>
               {project.github != null && (
@@ -54,13 +54,13 @@ export default function MainProject({ class: className, project }: Props): JSX.E
             </div>
           </div>
           {typeof project.brief !== 'undefined' && (
-            <h6 className='font-extralight text-xs '>{project.brief}</h6>
+            <h3 className='font-extralight text-xs '>{project.brief}</h3>
           )}
           <p className='text-foreground selection-foreground-important py-4 font-extralight text-sm'>
             {project.description}
           </p>
           <div className='justify-self-end flex flex-col gap-2 items-center'>
-            <h6 className='font-thin text-xs text-center '>Made With</h6>
+            <h3 className='font-thin text-xs text-center '>Made With</h3>
             <div className='flex gap-4'>
               {project.technologies.map(tech => (
                 <i key={`main-project-${tech}`} className='text-xl text-primary/80' title={tech}>
@@ -96,9 +96,9 @@ export default function MainProject({ class: className, project }: Props): JSX.E
               </i>
             ))}
           </div>
-          <h5 className='text-xs  text-center [text-shadow:0_0.2rem_1rem_var(--col-background)] py-[5%] w-full bg-background text-primary group-hover:bg-primary group-hover:text-background transition-colors'>
+          <h2 className='text-xs  text-center [text-shadow:0_0.2rem_1rem_var(--col-background)] py-[5%] w-full bg-background text-primary group-hover:bg-primary group-hover:text-background transition-colors'>
             {project.brief ?? project.name}
-          </h5>
+          </h2>
         </div>
       </button>
 

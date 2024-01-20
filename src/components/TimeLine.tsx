@@ -29,7 +29,7 @@ export default function TimeLine({
   return (
     <div className='flex flex-col relative'>
       <button
-        name='toggle ascendant order'
+        title='Toggle order'
         className={`absolute left-0 top-0 z-10 ${timeline.length < 3 && 'hidden'}`}
         onClick={() => {
           setAscend(!ascend)

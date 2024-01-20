@@ -41,6 +41,7 @@ const { links } = Astro.props
                 {name === 'twitter' && <TwitterIcon class='icon' />}
                 {name === 'linkedin' && <LinkedInIcon class='icon' />}
                 {!name && title}
+                <p class='size-0 select-none overflow-hidden opacity-0 p-0 m-0'>{name}</p>
               </a>
             )
           )

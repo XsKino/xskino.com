@@ -19,7 +19,7 @@ import { socialLinks as links } from '@/src/data/app'
         target={name !== 'mail' ? '_blank' : ''}
         rel='noopener noreferrer'
         class={`
-        text-xl relative group outline-none focus:outline-2 focus:outline-foreground size-[3rem] grid place-items-center transition-all
+        text-xl relative group outline-none focus:outline-2 focus:outline-foreground size-[3rem] flex justify-center items-center transition-all
         [box-shadow:0.3em_0.3em_0_0_var(--social-detail-color),inset_0.3em_0.3em_0_0_var(--social-main-color)]
         hover:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
         focus:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
@@ -29,7 +29,7 @@ import { socialLinks as links } from '@/src/data/app'
         {name === 'twitter' && <TwitterIcon class='icon' />}
         {name === 'linkedin' && <LinkedInIcon class='icon' />}
         {name === 'mail' && <MailIcon class='icon' />}
-        {!name && title}
+        <p class='size-0 select-none overflow-hidden opacity-0 p-0 m-0'>{name}</p>
       </a>
     )
   })
