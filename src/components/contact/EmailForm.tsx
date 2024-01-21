@@ -141,7 +141,7 @@ export default function EmailForm({ labels }: Props): JSX.Element {
         {labels.SEND}
       </SubmitButton>
       <Toaster
-        containerClassName='fixed inset-0 select-none'
+        containerClassName='fixed -translate-y-20 md:translate-y-0 select-none'
         position='bottom-center'
         toastOptions={{
           success: {
