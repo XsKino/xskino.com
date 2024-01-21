@@ -34,7 +34,12 @@ export default function ProjectModal({ isOpen, onOpenChange, project, labels }: 
                    md:bg-gradient-to-t via-15% from-primary/20 via-transparent to-transparent
                   `}>
                 <div className='relative'>
-                  <img src={`/img/projects/${project.image}`} alt={`Image of project  ${project.name}`} />
+                  <img
+                    src={`/img/projects/${project.image}`}
+                    alt={`Image of project  ${project.name}`}
+                    width={600}
+                    height={400}
+                  />
                   <div className='absolute bottom-0 w-full flex gap-4 p-2 text-xl text-semibold select-none text-foreground'>
                     {project.github != null && (
                       <Button

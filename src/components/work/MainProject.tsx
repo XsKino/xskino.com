@@ -31,7 +31,12 @@ export default function MainProject({ class: className, project, labels }: Props
           shadow-xl shadow-background/50
           overflow-hidden ${className}
           `}>
-        <img src={`/img/projects/${project.image}`} alt={`Image of project  ${project.name}`} />
+        <img
+          src={`/img/projects/${project.image}`}
+          alt={`Image of project  ${project.name}`}
+          height='400'
+          width='600'
+        />
         <div className='min-h-fit flex-1 flex flex-col justify-between p-4 bg-gradient-to-t from-primary/25 via-transparent to-transparent'>
           <div className='flex justify-between items-center pb-2'>
             <h2 className='font-semibold text-xl '>{project.name}</h2>
@@ -93,6 +98,8 @@ export default function MainProject({ class: className, project, labels }: Props
           className='h-full object-cover origin-bottom scale-125 transition-all group-hover:scale-100 group-hover:[transform:perspective(500px)_rotateX(-30deg)_translateZ(0)]'
           src={`/img/projects/${project.image}`}
           alt={`Image of project  ${project.name}`}
+          width={600}
+          height={400}
         />
         <div className='absolute inset-0 bg-gradient-to-b via-50% from-background via-transparent to-transparent flex flex-col justify-between'>
           <div className='flex justify-center pt-2 gap-4 text-lg flex-wrap text-foreground/50'>
