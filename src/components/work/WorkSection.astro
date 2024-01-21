@@ -70,6 +70,7 @@ const labels = {
       <ResumeButton href={i18n.URLS.RESUME} label={i18n.BUTTON_LABELS.RESUME_BUTTON} client:only='react' />
     </div>
     <Timeline
+      alwaysFull={jobsTimeline?.length < 3}
       ascend
       color='primary'
       client:only='react'

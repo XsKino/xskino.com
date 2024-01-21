@@ -13,7 +13,7 @@ const i18n = getI18n(Astro.currentLocale)
 ---
 
 <nav
-  class='fixed md:absolute md:hidden lg:flex z-40 text-3xl flex justify-evenly md:flex-col bottom-0 left-0 md:left-[unset] w-full md:right-0 md:w-fit md:h-full bg-gradient-to-t from-black to-black/50 backdrop-blur md:bg-none md:backdrop-blur-none'>
+  class='fixed md:absolute md:hidden lg:flex z-40 text-3xl flex justify-evenly md:flex-col bottom-0 left-0 md:left-[unset] w-full md:right-0 md:bottom-unset md:top-0 md:mr-3 md:w-fit md:h-screen bg-gradient-to-t from-black to-black/50 backdrop-blur md:bg-none md:backdrop-blur-none'>
   <Item client:only='react' id={i18n.SECTIONS.ID.HOME} title={i18n.SECTIONS.ID.HOME.toLocaleUpperCase()}>
     <HomeIcon />
   </Item>

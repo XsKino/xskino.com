@@ -89,6 +89,12 @@ export const socialLinks: Data<SocialLink[]> = {
   ]
 }
 
+// titles.length should be multiple of 3
+export const titles: Data<string[]> = {
+  en: ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer'],
+  es: ['Desarrollador', 'Estudiante', 'Ingeniero', 'Autodidacta', 'Artista', 'Diseñador']
+}
+
 interface ProjectSet {
   main: Project[]
   other?: Project[]
@@ -98,143 +104,142 @@ export const projects: Data<ProjectSet> = {
   en: {
     main: [
       {
-        name: 'Recipee',
-        brief: 'Food recipe catalogue',
-        description: `
-        hola lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-        `,
-        image: 'web-lab.jpg',
-        github: 'aksjda',
-        technologies: ['MySQL', 'Vuejs', 'Laravel']
+        name: 'Gori',
+        brief: 'AI Game Master',
+        description: `AI-Powered Game Master for tabletop RPGs.`,
+        image: 'gori.webp',
+        github: 'https://github.com/XsKino/gori',
+        link: 'https://gori-ai.vercel.app/',
+        technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
       },
       {
         name: 'Web Lab',
-        brief: 'Project Collection',
+        brief: 'Mini-project Collection',
         description: `
         Inspired by the 50 Days 50 Projects Challenge, I decided to create a website with a collection of web experiments where you can take a look at what's possible to do with web technologies.
         `,
-        image: 'web-lab.jpg',
+        image: 'web-lab.webp',
         github: 'https://github.com/XsKino/web-lab',
         link: 'https://xs-web-lab.vercel.app/',
         technologies: ['Astro', 'React', 'TailwindCSS']
       },
       {
-        name: 'No',
-        description: `
-        adios
-        `,
-        image: 'web-lab.jpg',
-        technologies: ['Nodejs', 'Kubernetes', 'TypeScript']
+        name: 'Refuzzed',
+        brief: 'NFT Marketplace',
+        description: `NFT Collection marketplace built on Solana. A new gamified experience`,
+        image: 'refuzzed.webp',
+        github: 'https://github.com/XsKino/refuzzed',
+        link: 'https://refuzzed.vercel.app/',
+        technologies: ['Solana', 'Nextjs', 'TailwindCSS']
       }
     ],
     other: [
       {
-        name: 'uno',
-        brief: 'brief xd',
-        description: `
-        hola
-        `,
-        image: 'web-lab.jpg',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
+        name: 'xs convert',
+        brief: 'Currency Converter',
+        description: `Currency converter built with JavaFX. with this project I got the oportunity to learn how to use JavaFX and how to use APIs in Java.`,
+        image: 'xsconvert.webp',
+        github: 'https://github.com/XsKino/xsconvert',
+        technologies: ['Java', 'CSS']
       },
       {
-        name: 'yadayada',
-        description: `
-        reeeeeeeeeeeeeeeee
-        `,
-        image: 'ewe.png',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
+        name: 'Encriptador de texto',
+        brief: 'Text Encryptor',
+        description: `Text Encryptor built with React and TailwindCSS for my Oracle Next Education course.`,
+        image: 'encriptador.webp',
+        github: 'https://github.com/XsKino/encriptador-de-texto',
+        link: 'https://xskino.github.io/encriptador-de-texto/',
+        technologies: ['React', 'TailwindCSS']
       },
       {
-        name: 'No',
-        brief: 'recipe catalogue',
-        description: `
-        adios
-        `,
-        image: 'web-lab.jpg',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
-      },
-      {
-        name: 'mememmeme',
-        description: `
-        hola
-        `,
-        image: 'uwu.png',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
-      },
-      {
-        name: 'dos',
-        description: `
-        reeeeeeeeeeeeeeeee
-        `,
-        image: 'ewe.png',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
-      },
-      {
-        name: 'laksjdlkas',
-        description: `
-        adios
-        `,
-        image: 'owo.png',
-        technologies: ['React', 'TailwindCSS', 'TypeScript']
+        name: 'Calculadora Estadística',
+        brief: 'Statistics Calculator',
+        description: `A simple statistics calculator for ungrouped values built with just HTML, CSS and JavaScript. This was actually the first "complete" project I made.`,
+        image: 'calculadora.webp',
+        github: 'https://github.com/XsKino/Calculadora-Estadistica',
+        link: 'https://codepen.io/andresprza/full/yLvXqXG',
+        technologies: ['HTML', 'JavaScript', 'CSS']
       }
     ]
   },
   es: {
     main: [
       {
-        name: 'Recipee',
-        brief: 'Food recipe catalogue',
-        description: `
-        hola lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-        `,
-        image: 'web-lab.jpg',
-        github: 'aksjda',
-        technologies: ['MySQL', 'Vuejs', 'Laravel']
+        name: 'Gori',
+        brief: 'AI Game Master',
+        description: `Game Master potenciado por IA para juegos de rol de mesa.`,
+        image: 'gori.webp',
+        github: 'https://github.com/XsKino/gori',
+        link: 'https://gori-ai.vercel.app/',
+        technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
       },
       {
         name: 'Web Lab',
-        brief: 'Project Collection',
+        brief: 'Colección de Mini-proyectos',
         description: `
-        Inspired by the 50 Days 50 Projects Challenge, I decided to create a website with a collection of web experiments where you can take a look at what's possible to do with web technologies.
+        Inspirado por el reto de 50 Días 50 Proyectos, decidí crear un sitio web con una colección de experimentos web donde puedes ver lo que es posible hacer con las tecnologías web.
         `,
-        image: 'web-lab.jpg',
+        image: 'web-lab.webp',
         github: 'https://github.com/XsKino/web-lab',
         link: 'https://xs-web-lab.vercel.app/',
         technologies: ['Astro', 'React', 'TailwindCSS']
       },
       {
-        name: 'No',
-        description: `
-        adios
-        `,
-        image: 'web-lab.jpg',
-        technologies: ['Nodejs', 'Kubernetes', 'TypeScript']
+        name: 'Refuzzed',
+        brief: 'NFT Marketplace',
+        description: `Marketplace de colecciones NFT construido en Solana. Una nueva experiencia gamificada.`,
+        image: 'refuzzed.webp',
+        github: 'https://github.com/XsKino/refuzzed',
+        link: 'https://refuzzed.vercel.app/',
+        technologies: ['Solana', 'Nextjs', 'TailwindCSS']
       }
     ],
-    other: []
+    other: [
+      {
+        name: 'xs convert',
+        brief: 'Conversor de monedas',
+        description: `Conversor de monedas hecho con JavaFX. Con este proyecto tuve la oportunidad de aprender a usar JavaFX y cómo usar APIs en Java.`,
+        image: 'xsconvert.webp',
+        github: 'https://github.com/XsKino/xsconvert',
+        technologies: ['Java', 'CSS']
+      },
+      {
+        name: 'Encriptador de texto',
+        description: `Encriptador de texto hecho con React y TailwindCSS para mi curso de Oracle Next Education.`,
+        image: 'encriptador.webp',
+        github: 'https://github.com/XsKino/encriptador-de-texto',
+        link: 'https://xskino.github.io/encriptador-de-texto/',
+        technologies: ['React', 'TailwindCSS']
+      },
+      {
+        name: 'Calculadora Estadística',
+        description: `Una simple calculadora estadística para valores no agrupados hecha con solo HTML, CSS y JavaScript. Este fue de hecho el primer proyecto "completo" que hice.`,
+        image: 'calculadora.webp',
+        github: 'https://github.com/XsKino/Calculadora-Estadistica',
+        link: 'https://codepen.io/andresprza/full/yLvXqXG',
+        technologies: ['HTML', 'JavaScript', 'CSS']
+      }
+    ]
   }
 }
 
 export const jobsTimeline: Data<TimelineItem[]> = {
   en: [
     {
-      date: '2020',
-      title: 'yadayadayada',
-      body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      date: '2020',
-      title: 'yadayadayada',
-      body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      date: '2020',
-      title: 'yadayadayada',
-      body: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      date: '2017 - 2022',
+      title: 'Family Business',
+      body: `Organized and optimized workflow for photo editing. Developed new and more efficient methods of data management. Improved efficiency by reducing asset generation time from 1 week to a couple 
+      of hours, by coding bva macros to create automatic powepoint slides.`
     }
   ],
-  es: []
+  es: [
+    {
+      date: '2017 - 2022',
+      title: 'Negocio Familiar',
+      body: `Organicé y optimicé el flujo de trabajo para la edición de fotos. Desarrollé nuevos y más eficientes métodos de gestión de datos. Mejoré la eficiencia al reducir el tiempo de generación de recurso
+       de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
+    }
+  ]
 }
 
 export const educationTimeline: Data<TimelineItem[]> = {
@@ -289,23 +294,194 @@ export const educationTimeline: Data<TimelineItem[]> = {
       body: "Currently studying Computer Science at Chihuahua's Institute of Technology II (ITCHII). So far, I have strengthened my knowledge in Object-Oriented Programming, Data Structures, and Algorithms."
     }
   ],
-  es: []
+  es: [
+    {
+      date: '2019 - 2022',
+      title: 'Preparatoria',
+      body: 'Durante la preparatoria tomé la especialidad de programación, donde aprendí los fundamentos de la programación con Java, desarrollo web con JavaScript, PHP y Laravel, bases de datos con MySQL, y desarrollo móvil con React Native.'
+    },
+    {
+      date: '2021 - 2023',
+      title: 'FreeCodeCamp.org',
+      body: 'He completado múltiples cursos en FreeCodeCamp.org, aprendiendo sobre desarrollo web, estructuras de datos, algoritmos, y más.',
+      links: [
+        {
+          text: 'Diseño Web Responsivo',
+          url: 'https://www.freecodecamp.org/certification/andresprza/responsive-web-design'
+        },
+        {
+          text: 'Algoritmos y Estructuras de Datos con JavaScript',
+          url: 'https://www.freecodecamp.org/certification/andresprza/javascript-algorithms-and-data-structures'
+        },
+        {
+          text: 'Librerías de Desarrollo Front End',
+          url: 'https://www.freecodecamp.org/certification/andresprza/front-end-development-libraries'
+        },
+        {
+          text: 'Computación Científica con Python',
+          url: 'https://www.freecodecamp.org/certification/andresprza/scientific-computing-with-python-v7'
+        }
+      ]
+    },
+    {
+      date: '2021 - Presente',
+      title: 'Autodidacta',
+      body: 'He aprendido muchas cosas por mi cuenta, como React, TypeScript, Nextjs, MongoDB, TailwindCSS, Astro, y más. seguro te diste cuenta que me gusta el desarrollo web.'
+    },
+    {
+      date: '2022 - 2023',
+      title: 'Oracle Next Education',
+      body: 'Alumno de la 5ta generación del programa Oracle Next Education, donde tomé la especialidad de back-end, aumentando mi conocimiento en JavaScript, Java y SQL. También aprendiendo Spring Boot y REST APIs, y varias soft skills.',
+      links: [
+        {
+          text: 'Certificado',
+          url: 'https://app.aluracursos.com/program/certificate/b9146c2e-a581-45ac-a333-ca7f09b245e7'
+        }
+      ]
+    },
+    {
+      date: '2022 - Presente',
+      title: 'Ingeniería Informática',
+      body: 'Actualmente estoy estudiando Ingeniería Informática en el Instituto Tecnológico de Chihuahua II (ITCHII). Hasta ahora, he fortalecido mi conocimiento en Programación Orientada a Objetos, Estructuras de Datos, y Algoritmos.'
+    }
+  ]
 }
 
 export const resources: Data<Resource[]> = {
   en: [
     {
-      title: 'FreeCodeCamp.org',
-      body: 'FreeCodeCamp is a non-profit organization that consists of an interactive learning web platform, an online community forum, chat rooms, Medium publications and local organizations that intend to make learning web development accessible to anyone.',
-      href: 'https://www.freecodecamp.org/',
-      imageUrl: 'placeholder.jpg'
+      title: 'My Instagram',
+      body: 'Sometimes I post my art and some other stuff on my Instagram. I dont post much, but I try to post something from time to time.',
+      href: 'https://www.instagram.com/andresprza/',
+      imageUrl: 'instagram.webp'
+    },
+    {
+      title: 'Anime and manga',
+      body: 'All my anime and manga list summarized in a Notion page. You can visit it if you want to find some recommendations.',
+      href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
+      imageUrl: 'animanga.webp'
+    },
+    {
+      title: 'Video Games',
+      body: 'A Notion page listing most of the games I have played.',
+      href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
+      imageUrl: 'games.webp'
+    },
+    {
+      title: 'My Spotify',
+      body: 'I love listening to music, it is probably one of my favorite things in life. You can check my Spotify profile if you want to see my playlists and the music I listen to, I have pretty versatile tastes.',
+      href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
+      imageUrl: 'spotify.webp'
+    },
+    {
+      title: 'neal.fun',
+      body: 'If you are bored, check this page.',
+      href: 'https://neal.fun/',
+      imageUrl: 'neal.webp'
+    },
+    {
+      title: 'Namelix',
+      body: 'Name generator for business, products, etc.',
+      href: 'https://namelix.com/',
+      imageUrl: 'namelix.webp'
+    },
+    {
+      title: 'Brandmark',
+      body: 'Logo generator. Very useful if you need ideas.',
+      href: 'https://brandmark.io/',
+      imageUrl: 'brandmark.webp'
+    },
+    {
+      title: 'Coolors',
+      body: 'Color palette generator. One of the best I have found.',
+      href: 'https://coolors.co/',
+      imageUrl: 'coolors.webp'
+    },
+    {
+      title: 'shots',
+      body: 'Create mockups really easy. Actually, most of the images on this site were created with shots.',
+      href: 'https://shots.so/',
+      imageUrl: 'shots.webp'
+    },
+    {
+      title: 'Refactoring Guru',
+      body: 'Catalog of design patterns and many other interesting programming topics.',
+      href: 'https://refactoring.guru/',
+      imageUrl: 'refactoring.webp'
+    },
+    {
+      title: 'Tablericons',
+      body: 'Open source svg icon catalog.',
+      href: 'https://tabler.io/icons',
+      imageUrl: 'tabler.webp'
     }
   ],
-  es: []
-}
-
-// titles.length should be multiple of 3
-export const titles: Data<string[]> = {
-  en: ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer'],
-  es: ['Desarrollador', 'Estudiante', 'Ingeniero', 'Autodidacta', 'Artista', 'Diseñador']
+  es: [
+    {
+      title: 'Mi Instagram',
+      body: 'A veces subo mi arte y alguna otra cosa a mi Instagram. No subo mucho, pero trato de subir algo de vez en cuando.',
+      href: 'https://www.instagram.com/andresprza/',
+      imageUrl: 'instagram.webp'
+    },
+    {
+      title: 'Anime y manga',
+      body: 'Toda mi lista de anime y manga resumida en una página de Notion. Puedes visitarla si quieres encontrar alguna recomendación.',
+      href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
+      imageUrl: 'animanga.webp'
+    },
+    {
+      title: 'Videojuegos',
+      body: 'Una página de Notion enlistando la mayoría de juegos que he jugado.',
+      href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
+      imageUrl: 'games.webp'
+    },
+    {
+      title: 'Mi Spotify',
+      body: 'Me encanta escuchar música, probablemente sea una de mis cosas favoritas en la vida. Puedes ver mi perfil de Spotify si quieres ver mis playlists y la música que escucho, tengo gustos bastante versátiles.',
+      href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
+      imageUrl: 'spotify.webp'
+    },
+    {
+      title: 'neal.fun',
+      body: 'Si estás aburrido, revisa esta página.',
+      href: 'https://neal.fun/',
+      imageUrl: 'neal.webp'
+    },
+    {
+      title: 'Namelix',
+      body: 'Generador de nombres para empresas, productos, etc.',
+      href: 'https://namelix.com/',
+      imageUrl: 'namelix.webp'
+    },
+    {
+      title: 'Brandmark',
+      body: 'Generador de logos. Muy util si requieres ideas',
+      href: 'https://brandmark.io/',
+      imageUrl: 'brandmark.webp'
+    },
+    {
+      title: 'Coolors',
+      body: 'Generador de paletas de colores. Uno de los mejores que he encontrado',
+      href: 'https://coolors.co/',
+      imageUrl: 'coolors.webp'
+    },
+    {
+      title: 'shots',
+      body: 'App para crear mockups de manera súper fácil. De hecho, la mayoría de las imágenes de este sitio fueron creadas con shots.',
+      href: 'https://shots.so/',
+      imageUrl: 'shots.webp'
+    },
+    {
+      title: 'Refactoring Guru',
+      body: 'Catálogo de patrones de diseño y muchos otros temas interesantes de programación.',
+      href: 'https://refactoring.guru/es',
+      imageUrl: 'refactoring.webp'
+    },
+    {
+      title: 'Tablericons',
+      body: 'Catálogo de iconos svg de código abierto.',
+      href: 'https://tabler.io/icons',
+      imageUrl: 'tabler.webp'
+    }
+  ]
 }

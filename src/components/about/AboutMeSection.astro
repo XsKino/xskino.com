@@ -30,7 +30,7 @@ const i18n = getI18n(Astro.currentLocale)
         </div>
         <!-- Section Banner -->
         <div class='w-4/5 flex flex-col items-center'>
-          <img src='/img/avatar/sections/about.png' alt='Kino' class='object-fit' />
+          <img src='/img/avatar/sections/about.webp' alt='Kino' class='object-fit' />
         </div>
       </div>
       <Introduction introduction={i18n.SECTIONS.ABOUT.INTRODUCTION} />
@@ -45,12 +45,15 @@ const i18n = getI18n(Astro.currentLocale)
     </section>
   </div>
   <section
-    class='flex flex-col items-center gap-20 px-10 py-20 w-full standard-container selection-secondary text-secondary'>
+    class={`
+      ${resources.length < 1 && 'hidden'}
+      flex flex-col items-center gap-20 px-10 py-20 w-full standard-container selection-secondary text-secondary
+    `}>
     <div class='text-center'>
       <h3>{i18n.SECTIONS.ABOUT.RESOURCES.TITLE}</h3>
       <p>{i18n.SECTIONS.ABOUT.RESOURCES.BODY}</p>
     </div>
     <!-- Resources section -->
-    <Resources client:only='react' resources={resources} />
+    <Resources client:only='react' resources={resources} labels={{ ...i18n.BUTTON_LABELS }} />
   </section>
 </div>

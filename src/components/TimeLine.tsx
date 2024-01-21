@@ -63,6 +63,7 @@ export default function TimeLine({
               <div
                 style={{ borderColor: `var(--col-${color ?? 'background'})` }}
                 className={`
+                ${timeline.length < 2 && 'hidden'}
               absolute size-5 rounded-full border-[2px]
               -translate-x-1/2 -left-[1.3rem]
               `}

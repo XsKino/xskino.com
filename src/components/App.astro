@@ -21,7 +21,7 @@ const { i18n, socialLinks, projects, educationTimeline, jobsTimeline, titles, re
   <div
     class='background-image fixed -z-50 inset-0 bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:4vh_4vh] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000_70%,transparent_110%)]'>
   </div>
-  <Header name='Kino' titles={titles} socialLinks={socialLinks}>
+  <Header name={i18n.SECTIONS.HEADER.DISPLAY_NAME} titles={titles} socialLinks={socialLinks}>
     <NavBar />
     <p>{i18n.SECTIONS.HEADER.SUBTITLE}</p>
     <p class='text-2xl'>{i18n.SECTIONS.HEADER.TITLE}</p>

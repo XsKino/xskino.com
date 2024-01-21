@@ -10,7 +10,7 @@ interface Props {
   resource: Resource
 }
 
-export default function HobbyItem({
+export default function ResourceItem({
   className,
   resource: { title, body, href, imageUrl }
 }: Props): JSX.Element {
@@ -21,17 +21,17 @@ export default function HobbyItem({
         ${className} shadow-xl shadow-black/20 hover:shadow-secondary/50 hover:shadow-lg
       `}>
       <div
-        style={{ backgroundImage: `url(/img/hobbies/${imageUrl})` }}
-        className='absolute inset-0 bg-cover bg-center -z-20'
+        style={{ backgroundImage: `url(/img/resources/${imageUrl})` }}
+        className='absolute inset-0 bg-cover bg-center -z-20 scale-110 group-hover:scale-100 transition-all'
       />
-      <div className='absolute transition-all inset-0 bg-gradient-to-t from-black/90 via-[6rem] group-hover:via-50% via-black/30 to-black/30 group-hover:to-black/70 -z-10' />
+      <div className='absolute transition-all inset-0 bg-gradient-to-t from-black/90 via-[6rem] group-hover:via-50% via-black/60 to-black/30 group-hover:to-black/75 -z-10' />
       <div className='overflow-hidden z-10 w-full'>
         <div
           style={{ transform: 'translateY(var(--translate-y))' }}
           className='[--translate-y:calc(100%-2em)] group-hover:[--translate-y:0] h-full transition-transform flex flex-col justify-between gap-4'>
           <div className='flex flex-col gap-4'>
             <h3 className='text-medium'>{title}</h3>
-            <p className='max-w-[40ch]'>{body}</p>
+            <p className='max-w-[30ch]'>{body}</p>
           </div>
           <Button
             className='self-end border'

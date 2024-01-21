@@ -10,6 +10,8 @@ export type Project = {
 }
 
 export type Technology =
+  | 'HTML'
+  | 'CSS'
   | 'JavaScript'
   | 'TypeScript'
   | 'Nodejs'
@@ -35,6 +37,7 @@ export type Technology =
   | 'Unreal Engine'
   | 'Flutter'
   | 'OpenAI API'
+  | 'Solana'
 
 export type TimelineItem = {
   date: string
