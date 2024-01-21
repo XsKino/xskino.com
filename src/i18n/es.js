@@ -1,6 +1,6 @@
 export default {
   PAGE: {
-    SEO_TITLE: "Kino's portfolio",
+    SEO_TITLE: 'Kino | Dev Portfolio',
     SEO_DESCRIPTION: 'This is a sample page.'
   },
   BUTTON_LABELS: {
