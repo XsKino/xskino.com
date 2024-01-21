@@ -3,22 +3,24 @@ import GitHubFillIcon from '@icons/jsx/GitHubFill'
 import ExternalLinkIcon from '@icons/jsx/ExternalLink'
 import XIcon from '@icons/jsx/X'
 
-import TechnologyIcon from '@components/TechnologyIcon'
+import TechnologyIcon from '@/src/components/work/TechnologyIcon'
 import { Modal, ModalContent, Button } from '@nextui-org/react'
 
-import type { Project } from '../types/app'
+import type { Project } from '@/src/types/app'
 
-export default function ProjectModal({
-  isOpen,
-  onOpenChange,
-  className,
-  project
-}: {
+interface Props {
   isOpen: boolean | undefined
   onOpenChange?: ((isOpen: boolean) => void) | undefined
-  className?: string
   project: Project
-}): JSX.Element {
+  labels: {
+    GITHUB: string
+    LIVE_PROJECT: string
+    CLOSE: string
+    MADE_WITH: string
+  }
+}
+
+export default function ProjectModal({ isOpen, onOpenChange, project, labels }: Props): JSX.Element {
   return (
     <Modal backdrop='opaque' className='bg-transparent' isOpen={isOpen} onOpenChange={onOpenChange}>
       <ModalContent>
@@ -46,7 +48,7 @@ export default function ProjectModal({
                           </i>
                         }
                         className='cursor-pointer text-medium text-foreground opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
-                        GitHub Repo
+                        {labels.GITHUB}
                       </Button>
                     )}
                     {project.link != null && (
@@ -61,7 +63,7 @@ export default function ProjectModal({
                           </i>
                         }
                         className='cursor-pointer text-medium text-foreground opacity-90 hover:opacity-100 p-4 px-6 rounded-full border border-foreground/20 flex items-center gap-4 flex-1 backdrop-blur max-w-1/2 justify-center bg-background/30'>
-                        Live Project
+                        {labels.LIVE_PROJECT}
                       </Button>
                     )}
                   </div>
@@ -76,7 +78,7 @@ export default function ProjectModal({
                   </p>
 
                   <div className='justify-self-end flex flex-col gap-2 items-center'>
-                    <h6 className='font-thin text-xs text-center '>Made With</h6>
+                    <h6 className='font-thin text-xs text-center '>{labels.MADE_WITH}</h6>
                     <div className='flex gap-4'>
                       {project.technologies.map(tech => (
                         <i key={`main-project-${tech}`} className='text-xl text-primary/80' title={tech}>
@@ -100,7 +102,7 @@ export default function ProjectModal({
               name='close Project Modal'
               className='self-center hidden md:block text-xs h-16 pt-6 -mt-6 w-[140%]'
               onPress={onClose}>
-              Close
+              {labels.CLOSE}
             </Button>
           </div>
         )}

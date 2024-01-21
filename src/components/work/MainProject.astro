@@ -1,0 +1,21 @@
+---
+import ProjectCard from '@/src/components/work/MainProject'
+import type { Project } from '../../types/app'
+
+interface Props {
+  class?: string
+  project: Project
+  labels: {
+    GITHUB: string
+    LIVE_PROJECT: string
+    CLOSE: string
+    MADE_WITH: string
+  }
+}
+
+const { class: className, project, labels } = Astro.props
+---
+
+<div class={`aspect-square md:aspect-[3/4] ${className}`}>
+  <ProjectCard client:only='react' project={project} labels={labels} />
+</div>

@@ -1,0 +1,56 @@
+---
+import Body from '@layouts/Layout.astro'
+import Header from '@components/header/Header.astro'
+import WorkSection from '@components/work/WorkSection.astro'
+import AboutMeSection from '@components/about/AboutMeSection.astro'
+import ContactSection from '@components/contact/ContactSection.astro'
+import NavBar from '@components/navbar/NavBar.astro'
+
+import getData from '@i18n/index'
+
+const { currentLocale: locale } = Astro
+const { i18n, socialLinks, projects, educationTimeline, jobsTimeline, titles, resources } = getData(locale)
+---
+
+<Body
+  title={i18n.PAGE.SEO_TITLE}
+  lang={locale ?? 'en'}
+  description={i18n.PAGE.SEO_DESCRIPTION}
+  htmlClass='bg-background'
+  class='flex flex-col items-center selection-foreground'>
+  <div
+    class='background-image fixed -z-50 inset-0 bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:4vh_4vh] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000_70%,transparent_110%)]'>
+  </div>
+  <Header name='Kino' titles={titles} socialLinks={socialLinks}>
+    <NavBar />
+    <p>{i18n.SECTIONS.HEADER.SUBTITLE}</p>
+    <p class='text-2xl'>{i18n.SECTIONS.HEADER.TITLE}</p>
+  </Header>
+  <main class='flex flex-col gap-40 w-screen items-center'>
+    <WorkSection mainProjects={projects.main} otherProjects={projects.other} jobsTimeline={jobsTimeline} />
+    <AboutMeSection education={educationTimeline} resources={resources} />
+    <ContactSection links={socialLinks} />
+  </main>
+</Body>
+
+<style>
+  @keyframes parallax {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100vh);
+    }
+  }
+
+  .background-image {
+    view-timeline-name: --background-image;
+    animation-timeline: --background-image;
+    animation-name: parallax;
+    animation-timing-function: linear;
+
+    view-timeline-axis: block;
+    animation-range: entry 50vh cover 500vh;
+    animation-fill-mode: both;
+  }
+</style>

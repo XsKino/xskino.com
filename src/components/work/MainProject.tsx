@@ -1,18 +1,24 @@
 import React from 'react'
 import GitHubFillIcon from '@icons/jsx/GitHubFill'
 import ExternalLinkIcon from '@icons/jsx/ExternalLink'
-import TechnologyIcon from '@components/TechnologyIcon'
+import TechnologyIcon from '@/src/components/work/TechnologyIcon'
 import { useDisclosure } from '@nextui-org/react'
-import ProjectModal from '@components/ProjectModal'
+import ProjectModal from '@/src/components/work/ProjectModal'
 
-import type { Project } from '../types/app'
+import type { Project } from '@/src/types/app'
 
 interface Props {
   class?: string
   project: Project
+  labels: {
+    GITHUB: string
+    LIVE_PROJECT: string
+    CLOSE: string
+    MADE_WITH: string
+  }
 }
 
-export default function MainProject({ class: className, project }: Props): JSX.Element {
+export default function MainProject({ class: className, project, labels }: Props): JSX.Element {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
   return (
@@ -33,7 +39,7 @@ export default function MainProject({ class: className, project }: Props): JSX.E
             <div className='flex text-2xl gap-4 text-foreground select-none'>
               {project.github != null && (
                 <a
-                  title='GitHub repository'
+                  title={labels.GITHUB}
                   href={project.github}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -43,7 +49,7 @@ export default function MainProject({ class: className, project }: Props): JSX.E
               )}
               {project.link != null && (
                 <a
-                  title='Live project'
+                  title={labels.LIVE_PROJECT}
                   href={project.link}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -60,7 +66,7 @@ export default function MainProject({ class: className, project }: Props): JSX.E
             {project.description}
           </p>
           <div className='justify-self-end flex flex-col gap-2 items-center'>
-            <h3 className='font-thin text-xs text-center '>Made With</h3>
+            <h3 className='font-thin text-xs text-center '>{labels.MADE_WITH}</h3>
             <div className='flex gap-4'>
               {project.technologies.map(tech => (
                 <i key={`main-project-${tech}`} className='text-xl text-primary/80' title={tech}>
@@ -102,7 +108,7 @@ export default function MainProject({ class: className, project }: Props): JSX.E
         </div>
       </button>
 
-      <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} />
+      <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} labels={labels} />
     </>
   )
 }

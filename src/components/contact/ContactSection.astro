@@ -1,0 +1,68 @@
+---
+import EmailForm from '@/src/components/contact/EmailForm'
+import GitHubIcon from '@icons/GitHub.astro'
+import TwitterIcon from '@icons/Twitter.astro'
+import LinkedInIcon from '@icons/LinkedIn.astro'
+import { getI18n } from '@i18n/index'
+
+import type { SocialLink } from '@/src/types/app'
+
+interface Props {
+  links: SocialLink[]
+}
+
+const { links } = Astro.props
+
+const i18n = getI18n(Astro.currentLocale)
+const currentYear = new Date().getFullYear()
+
+const formLabels = {
+  ...i18n.SECTIONS.CONTACT.FORM,
+  COPY_EMAIL: i18n.BUTTON_LABELS.COPY_EMAIL,
+  SEND: i18n.BUTTON_LABELS.SEND
+}
+---
+
+<div class='flex flex-col gap-40 w-screen items-center' id={i18n.SECTIONS.ID.CONTACT}>
+  <h1 id='contact' class='text-tertiary selection-tertiary text-center' id={i18n.SECTIONS.ID.CONTACT}>
+    {i18n.SECTIONS.CONTACT.TITLE}
+  </h1>
+
+  <div class='md:mt-32 relative flex w-full bg-tertiary justify-center'>
+    <!-- actual work section -->
+    <section class='flex flex-col gap-20 pb-20 w-full standard-container text-background'>
+      <div class='flex justify-evenly items-center gap-4 -mt-16 md:-mt-32 w-[150%] max-w-[90vw] self-center'>
+        <!-- glow -->
+        <div class='absolute bg-tertiary blur-3xl [border-radius:50%] size-full -top-32 md:-top-32 -z-10'>
+        </div>
+        <!-- Section Banner -->
+        <div class='min-h-64'>
+          <EmailForm client:only='react' labels={formLabels} />
+        </div>
+      </div>
+      <footer class='flex gap-4 items-center p-10 pt-0 md:p-0'>
+        <p class='flex-1'>© {currentYear} {i18n.SECTIONS.CONTACT.COPYRIGHT}</p>
+        {
+          links.map(({ name, title, url, alt }) => {
+            return (
+              name !== 'mail' && (
+                <a
+                  href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  class='p-2 text-background/70 hover:text-background'
+                  title={alt}>
+                  {name === 'github' && <GitHubIcon class='icon' />}
+                  {name === 'twitter' && <TwitterIcon class='icon' />}
+                  {name === 'linkedin' && <LinkedInIcon class='icon' />}
+                  {!name && title}
+                  <p class='size-0 select-none overflow-hidden opacity-0 p-0 m-0'>{name}</p>
+                </a>
+              )
+            )
+          })
+        }
+      </footer>
+    </section>
+  </div>
+</div>

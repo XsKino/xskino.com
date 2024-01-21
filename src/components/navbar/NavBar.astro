@@ -1,0 +1,42 @@
+---
+import LanguageSwitch from '@components/navbar/LanguageSwitch'
+import Item from '@components/navbar/NavBarItem'
+
+import HomeIcon from '@icons/Home.astro'
+import WorkIcon from '@icons/Work.astro'
+import AboutIcon from '@icons/About.astro'
+import Contact from '@icons/Contact.astro'
+
+import { getI18n } from '@/src/i18n'
+
+const i18n = getI18n(Astro.currentLocale)
+---
+
+<nav
+  class='fixed md:absolute md:hidden lg:flex z-40 text-3xl flex justify-evenly md:flex-col bottom-0 left-0 md:left-[unset] w-full md:right-0 md:w-fit md:h-full bg-gradient-to-t from-black to-black/50 backdrop-blur md:bg-none md:backdrop-blur-none'>
+  <Item client:only='react' id={i18n.SECTIONS.ID.HOME} title={i18n.SECTIONS.ID.HOME.toLocaleUpperCase()}>
+    <HomeIcon />
+  </Item>
+  <Item client:only='react' id={i18n.SECTIONS.ID.WORK} title={i18n.SECTIONS.ID.WORK.toLocaleUpperCase()}>
+    <WorkIcon />
+  </Item>
+  <Item client:only='react' id={i18n.SECTIONS.ID.ABOUT} title={i18n.SECTIONS.ID.ABOUT.toLocaleUpperCase()}>
+    <AboutIcon />
+  </Item>
+  <Item
+    client:only='react'
+    id={i18n.SECTIONS.ID.CONTACT}
+    title={i18n.SECTIONS.ID.CONTACT.toLocaleUpperCase()}>
+    <Contact />
+  </Item>
+  <div class='text-xl py-6 md:py-0 md:px-6 flex-1 group cursor-pointer grid place-content-center'>
+    <LanguageSwitch locale={Astro.currentLocale} client:only='react' />
+  </div>
+</nav>
+
+<style is:global>
+  .active-navbar-item > i {
+    scale: 1.25 !important;
+    opacity: 1 !important;
+  }
+</style>

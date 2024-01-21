@@ -1,0 +1,80 @@
+---
+import MainProject from '@/src/components/work/MainProject.astro'
+import OtherProject from '@/src/components/work/Project'
+import Timeline from '@components/TimeLine'
+import ResumeButton from '@/src/components/work/ResumeButton'
+import { getI18n } from '@i18n/index'
+
+import type { Project, TimelineItem } from '@/src/types/app'
+
+interface Props {
+  mainProjects: Project[]
+  otherProjects?: Project[]
+  jobsTimeline: TimelineItem[]
+}
+
+const { mainProjects, otherProjects, jobsTimeline } = Astro.props
+
+const i18n = getI18n(Astro.currentLocale)
+
+const labels = {
+  GITHUB: i18n.BUTTON_LABELS.GITHUB,
+  LIVE_PROJECT: i18n.BUTTON_LABELS.LIVE_PROJECT,
+  CLOSE: i18n.BUTTON_LABELS.CLOSE,
+  MADE_WITH: i18n.SECTIONS.WORK.PROJECT_LABELS.MADE_WITH
+}
+---
+
+<div class='flex flex-col gap-40 w-screen items-center' id={i18n.SECTIONS.ID.WORK}>
+  <h1 class='text-primary selection-primary text-center'>
+    {i18n.SECTIONS.WORK.TITLE}
+  </h1>
+
+  <div class='md:mt-32 relative flex w-full bg-primary justify-center clippy min-h-96'>
+    <!-- actual work section -->
+    <section class='flex flex-col gap-20 p-10 pb-20 w-full standard-container text-background'>
+      <div class='flex justify-evenly items-center gap-4 -mt-32 md:-mt-48 w-[150%] max-w-[90vw] self-center'>
+        <!-- glow -->
+        <div class='absolute bg-primary blur-3xl [border-radius:50%] size-full -top-16 md:-top-32 -z-50'>
+        </div>
+        <!-- Favorite projects -->
+        {
+          mainProjects?.map((project, i) => (
+            <MainProject
+              project={project}
+              class={`${i % 2 === 0 ? 'flex-1' : 'flex-[1.5]'}`}
+              labels={labels}
+            />
+          ))
+        }
+      </div>
+      <div class={`${!otherProjects?.length && 'hidden'} flex flex-col gap-10`}>
+        <h3 class='text-center text-background selection-foreground'>{i18n.SECTIONS.WORK.OTHER_PROJECTS}</h3>
+        <div class='gap-4 flex flex-wrap items-stretch'>
+          <!-- Other projects -->
+          {
+            otherProjects?.map(project => (
+              <OtherProject client:only='react' project={project} labels={labels} />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+  <section
+    class={`text-primary selection-primary flex flex-col p-10 gap-10 md:pt-20 standard-container ${
+      !jobsTimeline?.length && 'hidden'
+    }`}>
+    <div class='flex flex-col gap-6 items-center'>
+      <h2 class='text-center'>{i18n.SECTIONS.WORK.JOB_EXPERIENCE}</h2>
+      <ResumeButton href={i18n.URLS.RESUME} label={i18n.BUTTON_LABELS.RESUME_BUTTON} client:only='react' />
+    </div>
+    <Timeline
+      ascend
+      color='primary'
+      client:only='react'
+      timeline={jobsTimeline}
+      labels={{ ...i18n.BUTTON_LABELS }}
+    />
+  </section>
+</div>

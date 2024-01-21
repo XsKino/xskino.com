@@ -1,0 +1,8 @@
+---
+interface Props {
+  content: string
+  class?: string
+}
+---
+
+<p class={Astro.props.class} set:html={Astro.props.content} />

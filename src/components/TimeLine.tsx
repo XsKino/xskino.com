@@ -13,14 +13,19 @@ interface Props {
   bgColor?: 'primary' | 'secondary' | 'tertiary'
   alwaysFull?: boolean
   ascend?: boolean
+  labels: {
+    SHOW_MORE: string
+    SHOW_LESS: string
+    TOGGLE_ORDER: string
+  }
 }
 
 export default function TimeLine({
   timeline: timelineProp,
   color,
-  bgColor,
   alwaysFull,
-  ascend: propAscend
+  ascend: propAscend,
+  labels
 }: Props): JSX.Element {
   const [open, setOpen] = useState<boolean>(false)
   const [ascend, setAscend] = useState<boolean>(propAscend ?? false)
@@ -29,7 +34,7 @@ export default function TimeLine({
   return (
     <div className='flex flex-col relative'>
       <button
-        title='Toggle order'
+        title={labels.TOGGLE_ORDER}
         className={`absolute left-0 top-0 z-10 ${timeline.length < 3 && 'hidden'}`}
         onClick={() => {
           setAscend(!ascend)
@@ -91,14 +96,13 @@ export default function TimeLine({
       {alwaysFull ?? false ? null : (
         <Button
           radius='lg'
-          // variant={typeof color !== 'undefined' ? 'light' : 'ghost'}
           variant='light'
           name='toggle timeline full height'
           color={color === 'tertiary' ? 'warning' : color}
           className={
             typeof color !== 'undefined'
-              ? 'self-center'
-              : 'self-center hover:[background-color:transparent!important] border-2 border-transparent hover:border-background'
+              ? 'self-center uppercase'
+              : 'self-center uppercase hover:[background-color:transparent!important] border-2 border-transparent hover:border-background'
           }
           onPress={() => {
             setOpen(!open)
@@ -110,7 +114,7 @@ export default function TimeLine({
               <ChevronDownIcon />
             </i>
           }>
-          {open ? 'Show less' : 'Show more'}
+          {open ? labels.SHOW_LESS : labels.SHOW_MORE}
         </Button>
       )}
     </div>

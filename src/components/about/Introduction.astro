@@ -1,0 +1,35 @@
+---
+import Div from '@components/i18n/Div.astro'
+
+interface item {
+  TITLE: string
+  BODY: string
+}
+
+interface Props {
+  introduction: {
+    MAIN: item
+    SECOND: item
+    THIRD: item
+  }
+}
+
+const { introduction } = Astro.props
+---
+
+<div class='flex flex-col gap-4 text-sm'>
+  <article>
+    <h2 class='text-medium mb-4 font-bold'>{introduction.MAIN.TITLE}</h2>
+    <Div content={introduction.MAIN.BODY} />
+  </article>
+  <div class='flex flex-col md:flex-row gap-4'>
+    <article class='flex-1'>
+      <h2 class='text-medium mb-4 font-bold'>{introduction.SECOND.TITLE}</h2>
+      <Div content={introduction.SECOND.BODY} />
+    </article>
+    <article class='flex-1'>
+      <h2 class='text-medium mb-4 font-bold'>{introduction.THIRD.TITLE}</h2>
+      <Div content={introduction.THIRD.BODY} />
+    </article>
+  </div>
+</div>

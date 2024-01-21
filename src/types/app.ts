@@ -50,6 +50,24 @@ export type SocialLink = {
   name: string
   title: string
   url: string
+  alt: string
   mainColor?: string
   detailColor?: string
+}
+
+export type Resource = {
+  title: string
+  body: string
+  href: string
+  imageUrl?: string
+}
+
+export type TLaguageIso = 'en' | 'es'
+type TLaguage = 'English' | 'Spanish'
+type TNative = string
+
+export type SupportedLanguage = {
+  code: TLaguageIso
+  name: TLaguage
+  native: TNative
 }

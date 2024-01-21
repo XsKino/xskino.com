@@ -3,12 +3,17 @@ import MailIcon from '@icons/Mail.astro'
 import GitHubIcon from '@icons/GitHub.astro'
 import TwitterIcon from '@icons/Twitter.astro'
 import LinkedInIcon from '@icons/LinkedIn.astro'
+import type { SocialLink } from '@/src/types/app'
 
-import { socialLinks as links } from '@/src/data/app'
+interface Props {
+  links: SocialLink[]
+}
+
+const { links } = Astro.props
 ---
 
 {
-  links.map(({ name, title, url, mainColor, detailColor }) => {
+  links.map(({ name, url, mainColor, detailColor, alt }) => {
     return (
       <a
         style={{
@@ -24,7 +29,7 @@ import { socialLinks as links } from '@/src/data/app'
         hover:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
         focus:[box-shadow:0_0_0_0_var(--social-detail-color),inset_6em_3.5em_0_0_var(--social-main-color)]
         `}
-        title={`Kino's ${title}`}>
+        title={alt}>
         {name === 'github' && <GitHubIcon class='icon' />}
         {name === 'twitter' && <TwitterIcon class='icon' />}
         {name === 'linkedin' && <LinkedInIcon class='icon' />}

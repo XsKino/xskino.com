@@ -8,7 +8,36 @@ import { Button } from '@nextui-org/react'
 import CopyIcon from '@icons/jsx/Copy'
 import SendIcon from '@icons/jsx/Send'
 
-export default function EmailForm(): JSX.Element {
+interface Props {
+  labels: {
+    MY_EMAIL_LABEL: string
+    INPUTS: {
+      NAME: {
+        LABEL: string
+        PLACEHOLDER: string
+      }
+      EMAIL: {
+        LABEL: string
+        PLACEHOLDER: string
+      }
+      MESSAGE: {
+        PLACEHOLDER: string
+      }
+    }
+    MESSAGE_TOAST: {
+      SUCCESS: string
+      ERROR: string
+    }
+    COPY_TOAST: {
+      SUCCESS: string
+      ERROR: string
+    }
+    COPY_EMAIL: string
+    SEND: string
+  }
+}
+
+export default function EmailForm({ labels }: Props): JSX.Element {
   const [loading, setLoading] = useState(false)
 
   const form = useRef<HTMLFormElement>(null)
@@ -28,9 +57,9 @@ export default function EmailForm(): JSX.Element {
         import.meta.env.PUBLIC_EMAILJS_API_KEY
       )
       form.current?.reset()
-      toast.success('Message sent!')
+      toast.success(labels.MESSAGE_TOAST.SUCCESS)
     } catch (err) {
-      toast.error('Error sending message :(')
+      toast.error(labels.MESSAGE_TOAST.ERROR)
       console.log(err)
     }
 
@@ -40,9 +69,9 @@ export default function EmailForm(): JSX.Element {
   const copyEmail = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(myEmail)
-      toast.success('Adress copied to clipboard')
+      toast.success(labels.COPY_TOAST.SUCCESS)
     } catch (err) {
-      toast.error('Error copying to clipboard')
+      toast.error(labels.COPY_TOAST.ERROR)
     }
   }
 
@@ -53,7 +82,7 @@ export default function EmailForm(): JSX.Element {
       className='bg-background shadow-xl shadow-black/40 flex flex-col md:flex-row-reverse gap-6 p-6 rounded-xl slection-tertiary text-tertiary'>
       <div className='flex flex-col justify-between h-64 gap-6 flex-1 text-xs'>
         <div className='group'>
-          <p className='text-foreground/50'>This is my e-mail</p>
+          <p className='text-foreground/50'>{labels.MY_EMAIL_LABEL}</p>
           <div className='flex gap-4 items-center'>
             <p className='selection-tertiary'>{myEmail}</p>
             <Button
@@ -71,7 +100,7 @@ export default function EmailForm(): JSX.Element {
           <div className='pt-4 flex flex-col gap-4'>
             <div>
               <label htmlFor='name' className='text-foreground/50'>
-                What is your name?
+                {labels.INPUTS.NAME.LABEL}
               </label>
               <input
                 className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none rounded-lg p-1 hover:bg-foreground/[0.03]'
@@ -79,12 +108,12 @@ export default function EmailForm(): JSX.Element {
                 name='user_name'
                 id='name'
                 required
-                placeholder='Your name goes here'
+                placeholder={labels.INPUTS.NAME.PLACEHOLDER}
               />
             </div>
             <div>
               <label htmlFor='email' className='text-foreground/50'>
-                What is your e-mail?
+                {labels.INPUTS.EMAIL.LABEL}
               </label>
               <input
                 className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none rounded-lg p-1 hover:bg-foreground/[0.03]'
@@ -92,21 +121,25 @@ export default function EmailForm(): JSX.Element {
                 name='user-email'
                 id='email'
                 required
-                placeholder='someone@really.cool'
+                placeholder={labels.INPUTS.EMAIL.PLACEHOLDER}
               />
             </div>
           </div>
         </div>
-        <SubmitButton loading={loading} className='hidden md:flex' />
+        <SubmitButton loading={loading} className='hidden md:flex'>
+          {labels.SEND}
+        </SubmitButton>
       </div>
       <hr className='md:hidden rounded-full border-none h-[1px] w-full bg-tertiary/30' />
       <textarea
         required
         className='scrollbar h-64 bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 resize-none rounded-xl p-4 focus-visible:outline-none hover:bg-foreground/[0.03]'
         name='message'
-        placeholder='Tell me something!'
+        placeholder={labels.INPUTS.MESSAGE.PLACEHOLDER}
         id='message'></textarea>
-      <SubmitButton loading={loading} className='md:hidden' />
+      <SubmitButton loading={loading} className='md:hidden'>
+        {labels.SEND}
+      </SubmitButton>
       <Toaster
         containerClassName='fixed inset-0 select-none'
         position='bottom-center'
@@ -139,7 +172,15 @@ export default function EmailForm(): JSX.Element {
   )
 }
 
-const SubmitButton = ({ loading, className }: { loading: boolean; className: string }): JSX.Element => {
+const SubmitButton = ({
+  loading,
+  className,
+  children
+}: {
+  loading: boolean
+  className: string
+  children: string
+}): JSX.Element => {
   return (
     <Button
       isLoading={loading}
@@ -148,7 +189,7 @@ const SubmitButton = ({ loading, className }: { loading: boolean; className: str
       color='warning'
       startContent={loading ? null : <SendIcon />}
       variant='shadow'>
-      Send
+      {children}
     </Button>
   )
 }

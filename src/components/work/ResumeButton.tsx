@@ -2,17 +2,17 @@ import React from 'react'
 import PdfIcon from '@icons/jsx/Pdf'
 import { Button } from '@nextui-org/react'
 
-export default function ResumeButton(): JSX.Element {
+export default function ResumeButton({ label, href }: { label: string; href: string }): JSX.Element {
   return (
     <Button
       as='a'
       target='_blank'
       rel='noopener noreferrer'
-      href='/pdf/resume.pdf'
+      href={href}
       color='primary'
       variant='light'
       startContent={<PdfIcon />}>
-      Resume
+      {label}
     </Button>
   )
 }

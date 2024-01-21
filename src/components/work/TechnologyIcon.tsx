@@ -26,7 +26,7 @@ import UnityIcon from '@icons/jsx/technologies/Unity'
 import UnrealEngineIcon from '@icons/jsx/technologies/Unreal Engine'
 import VuejsIcon from '@icons/jsx/technologies/Vuejs'
 
-import type { Technology } from '../types/app'
+import type { Technology } from '../../types/app'
 
 export default function TechnologyIcon({ name }: { name: Technology }): JSX.Element {
   if (name === 'Angular') return <AngularIcon />

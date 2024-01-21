@@ -1,16 +1,22 @@
 import React from 'react'
-import ProjectModal from '@components/ProjectModal'
-import TechnologyIcon from '@components/TechnologyIcon'
+import ProjectModal from '@/src/components/work/ProjectModal'
+import TechnologyIcon from '@/src/components/work/TechnologyIcon'
 import { useDisclosure } from '@nextui-org/react'
 
-import type { Project } from '../types/app'
+import type { Project } from '../../types/app'
 
 interface Props {
   project: Project
   class?: string
+  labels: {
+    GITHUB: string
+    LIVE_PROJECT: string
+    CLOSE: string
+    MADE_WITH: string
+  }
 }
 
-export default function ProjectComponent({ project, class: className }: Props): JSX.Element {
+export default function ProjectComponent({ project, class: className, labels }: Props): JSX.Element {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
     <>
@@ -28,7 +34,7 @@ export default function ProjectComponent({ project, class: className }: Props): 
         </div>
       </button>
 
-      <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} />
+      <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} labels={labels} />
     </>
   )
 }
