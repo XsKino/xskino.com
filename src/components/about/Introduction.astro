@@ -17,18 +17,18 @@ interface Props {
 const { introduction } = Astro.props
 ---
 
-<div class='flex flex-col gap-4 text-sm'>
+<div class='flex flex-col gap-4 text-sm text-start md:text-justify'>
   <article>
-    <h2 class='text-medium mb-4 font-bold'>{introduction.MAIN.TITLE}</h2>
+    <h2 class='text-medium mb-4 font-bold text-start'>{introduction.MAIN.TITLE}</h2>
     <Div content={introduction.MAIN.BODY} />
   </article>
   <div class='flex flex-col md:flex-row gap-4'>
     <article class='flex-1'>
-      <h2 class='text-medium mb-4 font-bold'>{introduction.SECOND.TITLE}</h2>
+      <h2 class='text-medium mb-4 font-bold text-start'>{introduction.SECOND.TITLE}</h2>
       <Div content={introduction.SECOND.BODY} />
     </article>
     <article class='flex-1'>
-      <h2 class='text-medium mb-4 font-bold'>{introduction.THIRD.TITLE}</h2>
+      <h2 class='text-medium mb-4 font-bold text-start'>{introduction.THIRD.TITLE}</h2>
       <Div content={introduction.THIRD.BODY} />
     </article>
   </div>

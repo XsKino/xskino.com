@@ -98,32 +98,32 @@ export default function EmailForm({ labels }: Props): JSX.Element {
             </Button>
           </div>
           <div className='pt-4 flex flex-col gap-4'>
-            <div>
-              <label htmlFor='name' className='text-foreground/50'>
+            <label htmlFor='name' className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
+              <p className='text-foreground/50'>
                 {labels.INPUTS.NAME.LABEL}
-              </label>
+              </p>
               <input
-                className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none rounded-lg p-1 hover:bg-foreground/[0.03]'
+                className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none'
                 type='text'
                 name='user_name'
                 id='name'
                 required
                 placeholder={labels.INPUTS.NAME.PLACEHOLDER}
               />
-            </div>
-            <div>
-              <label htmlFor='email' className='text-foreground/50'>
+            </label>
+            <label htmlFor='email' className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
+              <p className='text-foreground/50'>
                 {labels.INPUTS.EMAIL.LABEL}
-              </label>
+              </p>
               <input
-                className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none rounded-lg p-1 hover:bg-foreground/[0.03]'
+                className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none'
                 type='email'
                 name='user-email'
                 id='email'
                 required
                 placeholder={labels.INPUTS.EMAIL.PLACEHOLDER}
               />
-            </div>
+            </label>
           </div>
         </div>
         <SubmitButton loading={loading} className='hidden md:flex'>
@@ -133,7 +133,7 @@ export default function EmailForm({ labels }: Props): JSX.Element {
       <hr className='md:hidden rounded-full border-none h-[1px] w-full bg-tertiary/30' />
       <textarea
         required
-        className='scrollbar h-64 bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 resize-none rounded-xl p-4 focus-visible:outline-none hover:bg-foreground/[0.03]'
+        className='scrollbar h-64 bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 resize-none rounded-xl p-4 outline-none ring-0 focus:bg-foreground/[0.03] hover:bg-foreground/[0.05] transition-all'
         name='message'
         placeholder={labels.INPUTS.MESSAGE.PLACEHOLDER}
         id='message'></textarea>

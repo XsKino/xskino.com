@@ -100,7 +100,7 @@ export default {
             PLACEHOLDER: 'alguien@super.cool'
           },
           MESSAGE: {
-            PLACEHOLDER: 'Cuéntame tu día, o algo así... Lo que quieras, en realidad :D'
+            PLACEHOLDER: 'Cuéntame tu día, o lo que quieras ;)'
           }
         },
         MESSAGE_TOAST: {

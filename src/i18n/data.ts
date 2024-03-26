@@ -230,6 +230,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
       title: 'Family Business',
       body: `Organized and optimized workflow for photo editing. Developed new and more efficient methods of data management. Improved efficiency by reducing asset generation time from 1 week to a couple 
       of hours, by coding bva macros to create automatic powepoint slides.`
+    },
+    {
+      date: 'Jan 2024 - Present',
+      title: 'Fullstack Developer',
+      body: `Developed a significant part of Kontigo™, a startup with an investment of over 1M$. Shipping for over 100K users at a fast pace, and a great user experience thanks to Nextjs and other bleeding-edge technologies.`,
+      links: [
+        {
+          text: 'kontigo.lat',
+          url: 'https://kontigo.lat/'
+        }
+      ]
     }
   ],
   es: [
@@ -238,6 +249,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
       title: 'Negocio Familiar',
       body: `Organicé y optimicé el flujo de trabajo para la edición de fotos. Desarrollé nuevos y más eficientes métodos de gestión de datos. Mejoré la eficiencia al reducir el tiempo de generación de recurso
        de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
+    },
+    {
+      date: 'Ene 2024 - Presente',
+      title: 'Desarrollador Fullstack',
+      body: `Desarrollé parte considerable de Kontigo™, una startup con una inversión de más de 1M$. Entregando valor a más de 100K usuarios a un ritmo veloz, y una gran experiencia de usuario. gracias a Nextjs y otras tecnologías modernas.`,
+      links: [
+        {
+          text: 'kontigo.lat',
+          url: 'https://kontigo.lat/'
+        }
+      ]
     }
   ]
 }
@@ -326,7 +348,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2021 - Presente',
       title: 'Autodidacta',
-      body: 'He aprendido muchas cosas por mi cuenta, como React, TypeScript, Nextjs, MongoDB, TailwindCSS, Astro, y más. seguro te diste cuenta que me gusta el desarrollo web.'
+      body: 'He aprendido muchas cosas por mi cuenta, como React, TypeScript, Nextjs, MongoDB, TailwindCSS, Astro, y más. Seguro te diste cuenta que me gusta el desarrollo web.'
     },
     {
       date: '2022 - 2023',

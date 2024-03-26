@@ -59,13 +59,13 @@ export default function TimeLine({
             ${i !== timeline.length - 1 && 'top-[1.1rem] translate-y-[2.35rem]'}
             `}
             />
-            <div className='relative flex flex-col justify-center font-bold'>
+            <div className='relative flex flex-col font-bold'>
               <div
                 style={{ borderColor: `var(--col-${color ?? 'background'})` }}
                 className={`
                 ${timeline.length < 2 && 'hidden'}
               absolute size-5 rounded-full border-[2px]
-              -translate-x-1/2 -left-[1.3rem]
+              -translate-x-1/2 -left-[1.3rem] mt-5
               `}
               />
               <h3>{item.date}</h3>

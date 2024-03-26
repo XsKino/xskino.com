@@ -10,7 +10,7 @@ export default function ResumeButton({ label, href }: { label: string; href: str
       rel='noopener noreferrer'
       href={href}
       color='primary'
-      variant='light'
+      variant='ghost'
       startContent={<PdfIcon />}>
       {label}
     </Button>
