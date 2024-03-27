@@ -90,7 +90,7 @@ export default {
         MY_EMAIL_LABEL: 'My e-mail',
         INPUTS: {
           NAME: {
-            LABEL: 'So, what was your name?',
+            LABEL: 'What is your name?',
             PLACEHOLDER: 'Your name goes here'
           },
           EMAIL: {
@@ -98,7 +98,7 @@ export default {
             PLACEHOLDER: 'someone@really.cool'
           },
           MESSAGE: {
-            PLACEHOLDER: 'Tell me whatever you want :D'
+            PLACEHOLDER: 'What are the good news?'
           }
         },
         MESSAGE_TOAST: {

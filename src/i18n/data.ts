@@ -154,7 +154,7 @@ export const projects: Data<ProjectSet> = {
       {
         name: 'Calculadora Estadística',
         brief: 'Statistics Calculator',
-        description: `A simple statistics calculator for ungrouped values built with just HTML, CSS and JavaScript. This was actually the first "complete" project I made.`,
+        description: `A simple statistics calculator for ungrouped values built with just HTML, CSS and JavaScript. This was actually the first project I made.`,
         image: 'calculadora.webp',
         github: 'https://github.com/XsKino/Calculadora-Estadistica',
         link: 'https://codepen.io/andresprza/full/yLvXqXG',
@@ -213,7 +213,7 @@ export const projects: Data<ProjectSet> = {
       },
       {
         name: 'Calculadora Estadística',
-        description: `Una simple calculadora estadística para valores no agrupados hecha con solo HTML, CSS y JavaScript. Este fue de hecho el primer proyecto "completo" que hice.`,
+        description: `Una simple calculadora estadística para valores no agrupados hecha con solo HTML, CSS y JavaScript. Este fue de hecho el primer proyecto que hice.`,
         image: 'calculadora.webp',
         github: 'https://github.com/XsKino/Calculadora-Estadistica',
         link: 'https://codepen.io/andresprza/full/yLvXqXG',
@@ -375,67 +375,67 @@ export const resources: Data<Resource[]> = {
       title: 'My Instagram',
       body: 'Sometimes I post my art and some other stuff on my Instagram. I dont post much, but I try to post something from time to time.',
       href: 'https://www.instagram.com/andresprza/',
-      imageUrl: 'instagram.webp'
+      imageUrl: 'instagram.jpg'
     },
     {
       title: 'Anime and manga',
       body: 'All my anime and manga list summarized in a Notion page. You can visit it if you want to find some recommendations.',
       href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
-      imageUrl: 'animanga.webp'
+      imageUrl: 'animanga.jpg'
     },
     {
       title: 'Video Games',
       body: 'A Notion page listing most of the games I have played.',
       href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
-      imageUrl: 'games.webp'
+      imageUrl: 'games.jpg'
     },
     {
       title: 'My Spotify',
       body: 'I love listening to music, it is probably one of my favorite things in life. You can check my Spotify profile if you want to see my playlists and the music I listen to, I have pretty versatile tastes.',
       href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
-      imageUrl: 'spotify.webp'
+      imageUrl: 'spotify.jpg'
     },
     {
       title: 'neal.fun',
       body: 'If you are bored, check this page.',
       href: 'https://neal.fun/',
-      imageUrl: 'neal.webp'
+      imageUrl: 'neal.jpg'
     },
     {
       title: 'Namelix',
       body: 'Name generator for business, products, etc.',
       href: 'https://namelix.com/',
-      imageUrl: 'namelix.webp'
+      imageUrl: 'namelix.jpg'
     },
     {
       title: 'Brandmark',
       body: 'Logo generator. Very useful if you need ideas.',
       href: 'https://brandmark.io/',
-      imageUrl: 'brandmark.webp'
+      imageUrl: 'brandmark.jpg'
     },
     {
       title: 'Coolors',
       body: 'Color palette generator. One of the best I have found.',
       href: 'https://coolors.co/',
-      imageUrl: 'coolors.webp'
+      imageUrl: 'coolors.jpg'
     },
     {
       title: 'shots',
       body: 'Create mockups really easy. Actually, most of the images on this site were created with shots.',
       href: 'https://shots.so/',
-      imageUrl: 'shots.webp'
+      imageUrl: 'shots.jpg'
     },
     {
       title: 'Refactoring Guru',
       body: 'Catalog of design patterns and many other interesting programming topics.',
       href: 'https://refactoring.guru/',
-      imageUrl: 'refactoring.webp'
+      imageUrl: 'refactoring.jpg'
     },
     {
       title: 'Tablericons',
       body: 'Open source svg icon catalog.',
       href: 'https://tabler.io/icons',
-      imageUrl: 'tabler.webp'
+      imageUrl: 'tabler.jpg'
     }
   ],
   es: [
@@ -443,67 +443,67 @@ export const resources: Data<Resource[]> = {
       title: 'Mi Instagram',
       body: 'A veces subo mi arte y alguna otra cosa a mi Instagram. No subo mucho, pero trato de subir algo de vez en cuando.',
       href: 'https://www.instagram.com/andresprza/',
-      imageUrl: 'instagram.webp'
+      imageUrl: 'instagram.jpg'
     },
     {
       title: 'Anime y manga',
       body: 'Toda mi lista de anime y manga resumida en una página de Notion. Puedes visitarla si quieres encontrar alguna recomendación.',
       href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
-      imageUrl: 'animanga.webp'
+      imageUrl: 'animanga.jpg'
     },
     {
       title: 'Videojuegos',
       body: 'Una página de Notion enlistando la mayoría de juegos que he jugado.',
       href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
-      imageUrl: 'games.webp'
+      imageUrl: 'games.jpg'
     },
     {
       title: 'Mi Spotify',
       body: 'Me encanta escuchar música, probablemente sea una de mis cosas favoritas en la vida. Puedes ver mi perfil de Spotify si quieres ver mis playlists y la música que escucho, tengo gustos bastante versátiles.',
       href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
-      imageUrl: 'spotify.webp'
+      imageUrl: 'spotify.jpg'
     },
     {
       title: 'neal.fun',
       body: 'Si estás aburrido, revisa esta página.',
       href: 'https://neal.fun/',
-      imageUrl: 'neal.webp'
+      imageUrl: 'neal.jpg'
     },
     {
       title: 'Namelix',
       body: 'Generador de nombres para empresas, productos, etc.',
       href: 'https://namelix.com/',
-      imageUrl: 'namelix.webp'
+      imageUrl: 'namelix.jpg'
     },
     {
       title: 'Brandmark',
       body: 'Generador de logos. Muy util si requieres ideas',
       href: 'https://brandmark.io/',
-      imageUrl: 'brandmark.webp'
+      imageUrl: 'brandmark.jpg'
     },
     {
       title: 'Coolors',
       body: 'Generador de paletas de colores. Uno de los mejores que he encontrado',
       href: 'https://coolors.co/',
-      imageUrl: 'coolors.webp'
+      imageUrl: 'coolors.jpg'
     },
     {
       title: 'shots',
       body: 'App para crear mockups de manera súper fácil. De hecho, la mayoría de las imágenes de este sitio fueron creadas con shots.',
       href: 'https://shots.so/',
-      imageUrl: 'shots.webp'
+      imageUrl: 'shots.jpg'
     },
     {
       title: 'Refactoring Guru',
       body: 'Catálogo de patrones de diseño y muchos otros temas interesantes de programación.',
       href: 'https://refactoring.guru/es',
-      imageUrl: 'refactoring.webp'
+      imageUrl: 'refactoring.jpg'
     },
     {
       title: 'Tablericons',
       body: 'Catálogo de iconos svg de código abierto.',
       href: 'https://tabler.io/icons',
-      imageUrl: 'tabler.webp'
+      imageUrl: 'tabler.jpg'
     }
   ]
 }

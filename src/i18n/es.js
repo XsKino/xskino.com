@@ -63,7 +63,7 @@ export default {
                 </p>`
         },
         SECOND: {
-          TITLE: 'Qué me diferencía?',
+          TITLE: '¿Qué me diferencía?',
           BODY: `<p>
                   <strong>Me apasiona mucho todo lo que hago</strong>, y me encanta sobrepasar mis propios límites, ir más allá de lo esperado.
                 </p>
@@ -92,15 +92,15 @@ export default {
         MY_EMAIL_LABEL: 'Este es mi correo',
         INPUTS: {
           NAME: {
-            LABEL: 'Perdona, cómo te llamabas?',
-            PLACEHOLDER: 'Aqui va tu nombre'
+            LABEL: '¿Cómo te llamas?',
+            PLACEHOLDER: 'Aquí va tu nombre'
           },
           EMAIL: {
             LABEL: 'Correo electrónico',
             PLACEHOLDER: 'alguien@super.cool'
           },
           MESSAGE: {
-            PLACEHOLDER: 'Cuéntame tu día, o lo que quieras ;)'
+            PLACEHOLDER: '¿Cuáles son las buenas nuevas?'
           }
         },
         MESSAGE_TOAST: {

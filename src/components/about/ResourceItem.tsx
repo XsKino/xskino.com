@@ -22,7 +22,7 @@ export default function ResourceItem({
       `}>
       <div
         style={{ backgroundImage: `url(/img/resources/${imageUrl})` }}
-        className='absolute inset-0 bg-cover bg-center -z-20 scale-110 group-hover:scale-100 transition-all'
+        className='absolute inset-0 bg-cover object-cover bg-center -z-20 scale-110 group-hover:scale-100 transition-all'
       />
       <div className='absolute transition-all inset-0 bg-gradient-to-t from-black/90 via-[6rem] group-hover:via-50% via-black/60 to-black/30 group-hover:to-black/75 -z-10' />
       <div className='overflow-hidden z-10 w-full'>

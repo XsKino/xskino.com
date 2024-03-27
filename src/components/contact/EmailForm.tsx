@@ -79,11 +79,11 @@ export default function EmailForm({ labels }: Props): JSX.Element {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className='bg-background shadow-xl shadow-black/40 flex flex-col md:flex-row-reverse gap-6 p-6 rounded-xl slection-tertiary text-tertiary'>
+      className='bg-background shadow-xl shadow-black/40 flex flex-col md:flex-row-reverse gap-2 p-6 rounded-xl slection-tertiary text-tertiary'>
       <div className='flex flex-col justify-between h-64 gap-6 flex-1 text-xs'>
         <div className='group'>
-          <p className='text-foreground/50'>{labels.MY_EMAIL_LABEL}</p>
-          <div className='flex gap-4 items-center'>
+          <p className='text-foreground/50 pl-3'>{labels.MY_EMAIL_LABEL}</p>
+          <div className='flex gap-4 items-center pl-3'>
             <p className='selection-tertiary'>{myEmail}</p>
             <Button
               className='group-hover:opacity-100 md:opacity-0 transition-opacity'
@@ -98,10 +98,10 @@ export default function EmailForm({ labels }: Props): JSX.Element {
             </Button>
           </div>
           <div className='pt-4 flex flex-col gap-4'>
-            <label htmlFor='name' className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
-              <p className='text-foreground/50'>
-                {labels.INPUTS.NAME.LABEL}
-              </p>
+            <label
+              htmlFor='name'
+              className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
+              <p className='text-foreground/50'>{labels.INPUTS.NAME.LABEL}</p>
               <input
                 className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none'
                 type='text'
@@ -111,10 +111,10 @@ export default function EmailForm({ labels }: Props): JSX.Element {
                 placeholder={labels.INPUTS.NAME.PLACEHOLDER}
               />
             </label>
-            <label htmlFor='email' className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
-              <p className='text-foreground/50'>
-                {labels.INPUTS.EMAIL.LABEL}
-              </p>
+            <label
+              htmlFor='email'
+              className='px-3 py-2 focus-within:bg-foreground/[0.05] hover:ring-1 hover:ring-tertiary/50 rounded-lg transition-all cursor-text'>
+              <p className='text-foreground/50'>{labels.INPUTS.EMAIL.LABEL}</p>
               <input
                 className='bg-transparent placeholder:text-foreground/20 selection-tertiary w-full md:flex-1 focus-visible:outline-none'
                 type='email'
