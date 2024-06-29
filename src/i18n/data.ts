@@ -233,8 +233,8 @@ export const jobsTimeline: Data<TimelineItem[]> = {
     },
     {
       date: 'Jan 2024 - Present',
-      title: 'Fullstack Developer',
-      body: `Developed a significant part of Kontigo™, a startup with an investment of over 1M$. Shipping for over 100K users at a fast pace, and a great user experience thanks to Nextjs and other bleeding-edge technologies.`,
+      title: 'Fullstack & Mobile Developer',
+      body: `Part of the development team of Kontigo™, a startup with an investment of over 1M$ USD. Shipping value to over 100K users. Developing the mobile app with React Native, and also being involved as a fullstack developer with Nextjs and Node.`,
       links: [
         {
           text: 'kontigo.lat',
@@ -252,8 +252,8 @@ export const jobsTimeline: Data<TimelineItem[]> = {
     },
     {
       date: 'Ene 2024 - Presente',
-      title: 'Desarrollador Fullstack',
-      body: `Desarrollé parte considerable de Kontigo™, una startup con una inversión de más de 1M$. Entregando valor a más de 100K usuarios a un ritmo veloz, y una gran experiencia de usuario. gracias a Nextjs y otras tecnologías modernas.`,
+      title: 'Desarrollador Fullstack y Mobile',
+      body: `Participé en el desarrollo de Kontigo™, una startup con inversión de más de 1M$ USD. Entregando valor a más de 100K usuarios. Desarrollando la aplicación móvil con React Native, además de involucrarme como desarrollador fullstack con Nextjs y Node.`,
       links: [
         {
           text: 'kontigo.lat',
