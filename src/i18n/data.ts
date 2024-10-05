@@ -232,9 +232,9 @@ export const jobsTimeline: Data<TimelineItem[]> = {
       of hours, by coding bva macros to create automatic powepoint slides.`
     },
     {
-      date: 'Jan 2024 - Present',
+      date: 'Jan - Oct 2024',
       title: 'Fullstack & Mobile Developer',
-      body: `Part of the development team of Kontigo™, a startup with an investment of over 1M$ USD. Shipping value to over 100K users. Developing the mobile app with React Native, and also being involved as a fullstack developer with Nextjs and Node.`,
+      body: `Part of the development team of Kontigo™, a startup focused on remittances based on USDc for Latin America. Responsible for the development of the mobile app with React Native, as well as carrying out fullstack development tasks with Nextjs and Node.`,
       links: [
         {
           text: 'kontigo.lat',
@@ -251,9 +251,9 @@ export const jobsTimeline: Data<TimelineItem[]> = {
        de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
     },
     {
-      date: 'Ene 2024 - Presente',
-      title: 'Desarrollador Fullstack y Mobile',
-      body: `Participé en el desarrollo de Kontigo™, una startup con inversión de más de 1M$ USD. Entregando valor a más de 100K usuarios. Desarrollando la aplicación móvil con React Native, además de involucrarme como desarrollador fullstack con Nextjs y Node.`,
+      date: 'Ene - Oct 2024',
+      title: 'Desarrollador Fullstack y Móvil',
+      body: `Parte del equipo de desarrollo de Kontigo™, una startup de +1M$ USD enfocada en remesas basadas en USDc para Latinoamérica. Encargándome del desarrollo de la aplicación móvil con React Native, además de llevar a cabo tareas de desarrollo fullstack con Nextjs y Node.`,
       links: [
         {
           text: 'kontigo.lat',
