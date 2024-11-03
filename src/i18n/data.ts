@@ -104,6 +104,28 @@ export const projects: Data<ProjectSet> = {
   en: {
     main: [
       {
+        name: 'Web Lab',
+        brief: 'Mini-project Collection',
+        description: `
+        Collection of frontend mini-projects.
+        `,
+        image: 'web-lab.webp',
+        github: 'https://github.com/XsKino/web-lab',
+        link: 'https://lab.xskino.com',
+        technologies: ['Astro', 'React', 'TailwindCSS']
+      },
+      {
+        name: 'KepTrack',
+        brief: 'Expense Tracker',
+        description: `
+        Expense tracking tool for your recurring expenses.
+        `,
+        image: 'keptrack.webp',
+        // github: 'https://github.com/XsKino/keptrack',
+        link: 'https://keptrack.com',
+        technologies: ['TypeScript', 'Nextjs', 'TailwindCSS']
+      },
+      {
         name: 'Gori',
         brief: 'AI Game Master',
         description: `AI-Powered Game Master for tabletop RPGs.`,
@@ -112,17 +134,8 @@ export const projects: Data<ProjectSet> = {
         link: 'https://gori-ai.vercel.app/',
         technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
       },
-      {
-        name: 'Web Lab',
-        brief: 'Mini-project Collection',
-        description: `
-        Inspired by the 50 Days 50 Projects Challenge, I decided to create a website with a collection of web experiments where you can take a look at what's possible to do with web technologies.
-        `,
-        image: 'web-lab.webp',
-        github: 'https://github.com/XsKino/web-lab',
-        link: 'https://xs-web-lab.vercel.app/',
-        technologies: ['Astro', 'React', 'TailwindCSS']
-      },
+    ],
+    other: [
       {
         name: 'Refuzzed',
         brief: 'NFT Marketplace',
@@ -131,9 +144,7 @@ export const projects: Data<ProjectSet> = {
         github: 'https://github.com/XsKino/refuzzed',
         link: 'https://refuzzed.vercel.app/',
         technologies: ['Solana', 'Nextjs', 'TailwindCSS']
-      }
-    ],
-    other: [
+      },
       {
         name: 'xs convert',
         brief: 'Currency Converter',
