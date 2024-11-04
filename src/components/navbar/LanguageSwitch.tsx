@@ -1,7 +1,18 @@
 import React from 'react'
 import 'flag-icons/css/flag-icons.min.css'
-import { Popover, PopoverTrigger, PopoverContent, Button, Listbox, ListboxItem } from '@nextui-org/react'
+import {
+  Popover as PopoverFix,
+  PopoverTrigger,
+  PopoverContent,
+  Button,
+  Listbox as ListboxFix,
+  ListboxItem
+} from '@nextui-org/react'
 import { languages } from '@i18n/data'
+
+// weird af typescript bug
+const Popover = PopoverFix as any
+const Listbox = ListboxFix as any
 
 export default function LanguageSwitch({ locale = 'en' }: { locale?: string | undefined }): JSX.Element {
   const getFlagCode = (locale: string | undefined): string => {

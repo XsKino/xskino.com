@@ -4,10 +4,12 @@ import ExternalLinkIcon from '@icons/jsx/ExternalLink'
 import XIcon from '@icons/jsx/X'
 
 import TechnologyIcon from '@/src/components/work/TechnologyIcon'
-import { Modal, ModalContent, Button } from '@nextui-org/react'
+import { Modal as ModalFix, ModalContent, Button } from '@nextui-org/react'
 
 import type { Project } from '@/src/types/app'
 
+// weird af typescript bug
+const Modal = ModalFix as any
 interface Props {
   isOpen: boolean | undefined
   onOpenChange?: ((isOpen: boolean) => void) | undefined
