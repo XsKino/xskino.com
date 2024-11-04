@@ -1,0 +1,39 @@
+---
+import "@phosphor-icons/web/regular"
+const nots = [
+  {
+    title: "Un sitio web",
+    description: "Un sitio web tiene varias secciones como “Nosotros”, “Blog”, “Servicios”, etc. Una landing page es solo una página enfocada en un solo objetivo."
+  },
+  {
+    title: "Un producto",
+    description: "Una landing page es una herramienta para promocionar un producto (o un servicio, evento, etc)."
+  },
+  {
+    title: "Un e-commerce",
+    description: "Un e-commerce es un sitio web que permite comprar y vender productos. Una landing page es únicamente informativa."
+  }
+];
+---
+
+<section class="bg-foreground text-background py-20">
+  <div class="container mx-auto px-4 lg:border-b pb-8">
+    <div class="space-y-6 my-24">
+      <h2 class="text-4xl font-semibold text-center">¿Qué <strong class="font-extrabold">NO</strong> es una landing page?</h2>
+    </div>
+    <div class="flex max-lg:flex-col gap-4">
+      {nots.map((feature, i) => (
+        <>
+          <div class="p-6">
+            <div class="flex items-center gap-2 md:gap-4">
+              <i class="ph-bold ph-x text-2xl text-pink-600"></i>
+              <h3 class="text-xl font-semibold">{feature.title}</h3>
+            </div>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+          {i < nots.length - 1 && <div class="max-lg:h-[1px] max-lg:w-full lg:w-[1px] lg:h-auto bg-gray-200"></div>}
+        </>
+      ))}
+    </div>
+  </div>
+</section> 

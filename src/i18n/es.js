@@ -25,7 +25,7 @@ export default {
       CONTACT: 'Contacto'
     },
     HEADER: {
-      DISPLAY_NAME: 'Andrés Piñón',
+      DISPLAY_NAME: 'Kino',
       TITLE: '"Uso la pogramación como herramienta para crear un mundo más cómodo"',
       SUBTITLE: '+2 años de experiencia como desarrollador, creando soluciones bonitas, únicas y funcionales.'
     },
@@ -44,22 +44,18 @@ export default {
         MAIN: {
           TITLE: '¿Quién soy?',
           BODY: `<p>
-                <strong>Mi nombre es Andrés Piñón</strong>, soy de México 🌮 y me gusta la programación, el arte, los videojuegos y los animales.
+                <strong>Mi nombre es Kino</strong>, soy de México 🌮 y me gusta la programación, el arte y los videojuegos.
                 </p>
                 <p>
-                De chico tuve muchos sueños, de los cuales algunos aún pienso cumplir, desde el clásico de ser Youtuber, hasta ser productor musical.
+                De chico tuve muchos sueños, de los cuales algunos aún pienso cumplir, desde el clásico sueño de ser Youtuber, hasta ser productor musical.
                 </p>
                 <p>
                   A los 12 me interesé bastante por el desarrollo
-                  de videojuegos, al punto que en ese entonces, mi sueño era volverme un desarrollador indie, aunque no es que puediera hacer mucho, ya que en ese entonces no tenía una PC  que pudiera llamar "decente", 
-                  pero gracias a ese sueño, descubrí que <strong>programar es algo que me encanta</strong>.
+                  de videojuegos, al punto que en ese entonces, mi sueño era convertirme en un desarrollador indie exitoso, aunque no es que puediera hacer mucho, ya que en ese entonces no tenía una PC muy buena que digamos, 
+                  pero gracias a ese sueño, descubrí que <strong>me encanta la programación</strong>.
                 </p>
                 <p>
-                  Y aunque no tomé la ruta de desarrollador de videojuegos, sigo teniendo un gran amor por los videojuegos, y me encantaría poder cumplir ese sueño algún día.
-                </p>
-
-                <p>
-                  Por si te preguntas, <strong>"Kino" es mi apodo :p</strong>, puedes decirme así si quieres ;).
+                  Y aunque no tomé la ruta del desarrollo de videojuegos, sigo teniendo un gran amor por los videojuegos, y me encantaría poder cumplir ese sueño algún día.
                 </p>`
         },
         SECOND: {

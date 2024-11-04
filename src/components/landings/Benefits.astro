@@ -1,0 +1,83 @@
+---
+import '@phosphor-icons/web/regular'
+import '@phosphor-icons/web/fill'
+
+const benefits = [
+  {
+    title: 'Modernidad',
+    description: 'Estar online inspira confianza y demuestra que estás al día.',
+    icon: 'globe',
+    class: 'text-blue-400'
+  },
+  {
+    title: 'Presentación Profesional',
+    description: 'Es como una tarjeta de presentación, muestra que te tomas en serio lo que haces.',
+    icon: 'star',
+    class: 'text-yellow-200'
+  },
+  {
+    title: 'Mensaje Focalizado',
+    description: 'Aquí puedes ir directo al grano y guiar a los clientes hacia lo que quieres que hagan.',
+    icon: 'target',
+    class: 'text-fuchsia-400'
+  },
+  {
+    title: 'Visibilidad',
+    description: 'Aumenta la visibilidad de tu negocio en los motores de búsqueda.',
+    icon: 'eye',
+    class: 'text-green-300'
+  }
+]
+---
+
+<section id='beneficios' class='pb-20 relative bg-background'>
+  <div
+    id='info'
+    class='bg-background/70 p-4 flex gap-4 items-center justify-center relative -translate-y-1/2 text-base'>
+    <i class='ph-fill ph-info text-lg'></i>
+    <span class='tracking-wide'>
+      <strong>Landing Page:</strong> Página web diseñada con el único propósito de convertir visitantes en clientes
+      potenciales para tu negocio.
+    </span>
+  </div>
+  <div class='container mx-auto px-4'>
+    <div class='space-y-6 my-24'>
+      <h2 class='text-4xl font-bold text-center'>Y yo, ¿para qué quiero una landing page?</h2>
+      <p class='text-xl text-center text-gray-300'>Si tienes un negocio, necesitas una.</p>
+    </div>
+    <div class='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+      {
+        benefits.map(benefit => (
+          <div class='p-1 rounded-xl shadow-lg bg-blur-sm relative fade-in flex bg-black/10'>
+            {/* <div class="absolute inset-0 bg-landing blur-lg -z-10 opacity-50"></div> */}
+            <div class='flex flex-col'>
+              <div class='flex md:flex-col gap-4 items-center text-center p-2'>
+                <div class='text-4xl'>
+                  <i class={`ph ph-${benefit.icon} ${benefit.class}`} />
+                </div>
+                <h3 class={`text-base font-semibold `}>{benefit.title}</h3>
+              </div>
+              <div class='bg-gradient-to-t to-transparent px-4 pt-2 rounded-lg flex-1'>
+                <p class={`text-gray-300`}>{benefit.description}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-landing {
+    background-image: url('/img/landings/benefits-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #info {
+    backdrop-filter: blur(14px);
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import '@phosphor-icons/web/bold'
+import CalculatorButton from './CalculatorButton.jsx'
+---
+
+<section
+  id='hero'
+  class='min-h-[80vh] flex flex-col justify-center items-center text-center p-6 pb-48 gap-12'>
+  <h1 id='hero-title' class='text-[max(2rem,10vw-2rem)] font-extrabold'>Potencia tus ventas</h1>
+  <h2 id='hero-subtitle' class='text-[max(1.2rem,6vw-2.2rem)]'>Obtén una landing</h2>
+  <CalculatorButton client:only='react' />
+</section>
+
+<style>
+  #hero,
+  #hero-title,
+  #hero-subtitle {
+    background-image: url('/img/landings/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #hero-title,
+  #hero-subtitle {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: hue-rotate(-90deg) saturate(1.2) brightness(1.2);
+  }
+
+  #hero-title::selection,
+  #hero-subtitle::selection {
+    background: black;
+    color: white;
+  }
+</style>

@@ -44,20 +44,17 @@ export default {
         MAIN: {
           TITLE: 'Who am I?',
           BODY: `<p>
-                  <strong>My name is Andrés Piñón</strong>, I'm from Mexico 🌮 and I like coding, art, videogames and animals.
+                  <strong>My name is Kino</strong>, I'm from Mexico 🌮 and I like coding, art, and videogames.
                 </p>
                 <p>
                   As a child I had a lot of dreams, some of which I still want to accomplish, from having a big Youtube channel, to being a music producer.
                 </p>
                 <p>
                   When I was 12 I got really into game development, to the point that my dream was to become an indie game developer back then, although I couldn't do much, since I didn't have a decent PC,
-                  but thanks to that dream, I discovered that <strong>programming was something I really enjoyed!</strong>
+                  but thanks to that dream, I discovered that <strong>I really enjoy programming!</strong>
                 </p>
                 <p>
                   And even though I didn't take the game development route, I still have a great love for videogames, and I would love to be able to fulfill that dream someday.
-                </p>
-                <p>
-                  In case you're wondering, <strong>"Kino" is a nickname</strong>, you can call me that if you want ;).
                 </p>`
         },
         SECOND: {
