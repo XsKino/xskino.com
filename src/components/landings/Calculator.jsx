@@ -283,7 +283,7 @@ const ContactSection = ({ className, message }) => {
         </a>
         <label className='flex-1 flex justify-between items-end p-4 rounded-lg bg-gray-50 border border-gray-100 font-extralight hover:border-gray-300 transition-all cursor-text'>
           <textarea
-            className='w-full h-full resize-none p-2 rounded bg-transparent border-none outline-none'
+            className='w-full h-full resize-none p-2 rounded bg-transparent border-none outline-none min-h-[14ch]'
             ref={messageRef}
             onChange={e => setMessageValue(e.target.value)}></textarea>
           <div className='flex justify-end'>
