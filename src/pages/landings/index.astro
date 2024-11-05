@@ -1,15 +1,33 @@
 ---
-import Layout from '@layouts/Layout.astro'
+import SEOMaxxing from '@layouts/SEOMaxxing.astro'
 import Hero from '@components/landings/Hero.astro'
 import Benefits from '@components/landings/Benefits.astro'
 import Calculator from '@components/landings/Calculator.jsx'
 import Nots from '@components/landings/Nots.astro'
 ---
 
-<Layout
-  title='Obtén una landing page'
-  description='descubre cómo una landing page puede ayudarte a impulsar tus ventas'
-  lang='es'>
+<!-- interface Props {
+  title: string
+  description: string
+  lang: string
+  class?: string
+  htmlClass?: string
+  canonical?: string
+  type?: string
+  image?: string
+  twitterCard?: string
+  keywords?: string
+} -->
+<SEOMaxxing
+  title='Landing Page Profesional | Impulsa tus Ventas Online'
+  description='Crea una landing page profesional y optimizada que convertirá visitantes en clientes. Diseño personalizado, alta conversión y resultados garantizados. ¡Impulsa tus ventas hoy!'
+  lang='es'
+  keywords='landing page profesional, diseño landing page, crear landing page, página de aterrizaje, conversión web, landing page ventas, diseño web conversion, landing page optimizada, página de destino, marketing digital'
+  image='/img/landings/banner.jpg'
+  twitterCard='summary_large_image'
+  type='website'
+  canonical={new URL('/landings', Astro.site).toString()}
+  htmlClass='scroll-smooth'>
   <main>
     <Hero />
     <Benefits />
@@ -23,4 +41,4 @@ import Nots from '@components/landings/Nots.astro'
       </div>
     </section>
   </main>
-</Layout>
+</SEOMaxxing>
