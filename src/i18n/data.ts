@@ -133,7 +133,7 @@ export const projects: Data<ProjectSet> = {
         github: 'https://github.com/XsKino/gori',
         link: 'https://gori-ai.vercel.app/',
         technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
-      },
+      }
     ],
     other: [
       {
@@ -253,6 +253,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
         }
       ]
     }
+    // {
+    //   date: 'Dec 2024 - Present',
+    //   title: 'Fullstack Developer',
+    //   body: 'Currently working as a fullstack developer. Nextjs and Node.',
+    //   links: [
+    //     {
+    //       text: 'Change and Code',
+    //       url: 'https://changeandcode.com/'
+    //     }
+    //   ]
+    // }
   ],
   es: [
     {
@@ -384,7 +395,7 @@ export const resources: Data<Resource[]> = {
   en: [
     {
       title: 'My Instagram',
-      body: 'Sometimes I post my art and some other stuff on my Instagram. I dont post much, but I try to post something from time to time.',
+      body: 'Maybe some day I will actually start posting interesting stuff there, make sure to follow me so you dont miss it.',
       href: 'https://www.instagram.com/andresprza/',
       imageUrl: 'instagram.jpg'
     },
@@ -443,16 +454,16 @@ export const resources: Data<Resource[]> = {
       imageUrl: 'refactoring.jpg'
     },
     {
-      title: 'Tablericons',
-      body: 'Open source svg icon catalog.',
-      href: 'https://tabler.io/icons',
-      imageUrl: 'tabler.jpg'
+      title: 'Phosphor Icons',
+      body: 'My favorite icon library.',
+      href: 'https://phosphoricons.com/',
+      imageUrl: 'phosphor.jpg'
     }
   ],
   es: [
     {
       title: 'Mi Instagram',
-      body: 'A veces subo mi arte y alguna otra cosa a mi Instagram. No subo mucho, pero trato de subir algo de vez en cuando.',
+      body: 'Tal vez algún día comience a publicar cosas interesantes allí, sígueme para no perdértelo.',
       href: 'https://www.instagram.com/andresprza/',
       imageUrl: 'instagram.jpg'
     },
@@ -511,10 +522,10 @@ export const resources: Data<Resource[]> = {
       imageUrl: 'refactoring.jpg'
     },
     {
-      title: 'Tablericons',
-      body: 'Catálogo de iconos svg de código abierto.',
-      href: 'https://tabler.io/icons',
-      imageUrl: 'tabler.jpg'
+      title: 'Phosphor Icons',
+      body: 'Mi librería de iconos favorita.',
+      href: 'https://phosphoricons.com/',
+      imageUrl: 'phosphor.jpg'
     }
   ]
 }
