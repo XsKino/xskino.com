@@ -91,8 +91,10 @@ export const socialLinks: Data<SocialLink[]> = {
 
 // titles.length should be multiple of 3
 export const titles: Data<string[]> = {
-  en: ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist', 'Designer'],
-  es: ['Desarrollador', 'Estudiante', 'Ingeniero', 'Autodidacta', 'Artista', 'Diseñador']
+  // en: ['Developer', 'CS Major', 'Engineer', 'Self-Taught', 'Artist wannabe', 'Influencer?'],
+  // es: ['Desarrollador', 'Estudiante', 'Ingeniero', 'Autodidacta', 'Artista wannabe', 'Influencer?']
+  en: ['Developer', 'CS Major', 'Engineer'],
+  es: ['Desarrollador', 'Estudiante', 'Autodidacta']
 }
 
 interface ProjectSet {
@@ -236,12 +238,12 @@ export const projects: Data<ProjectSet> = {
 
 export const jobsTimeline: Data<TimelineItem[]> = {
   en: [
-    {
-      date: '2017 - 2022',
-      title: 'Family Business',
-      body: `Organized and optimized workflow for photo editing. Developed new and more efficient methods of data management. Improved efficiency by reducing asset generation time from 1 week to a couple 
-      of hours, by coding bva macros to create automatic powepoint slides.`
-    },
+    // {
+    //   date: '2017 - 2022',
+    //   title: 'Family Business',
+    //   body: `Organized and optimized workflow for photo editing. Developed new and more efficient methods of data management. Improved efficiency by reducing asset generation time from 1 week to a couple
+    //   of hours, by coding bva macros to create automatic powepoint slides.`
+    // },
     {
       date: 'Jan - Oct 2024',
       title: 'Fullstack & Mobile Developer',
@@ -252,26 +254,26 @@ export const jobsTimeline: Data<TimelineItem[]> = {
           url: 'https://kontigo.lat/'
         }
       ]
+    },
+    {
+      date: 'Dec 2024 - Present',
+      title: 'Fullstack Developer',
+      body: 'Currently working as a fullstack developer. I use Nextjs. Node for the backend, and TailwindCSS for the frontend.'
+      // links: [
+      //   {
+      //     text: 'Change and Code',
+      //     url: 'https://changeandcode.com/'
+      //   }
+      // ]
     }
-    // {
-    //   date: 'Dec 2024 - Present',
-    //   title: 'Fullstack Developer',
-    //   body: 'Currently working as a fullstack developer. Nextjs and Node.',
-    //   links: [
-    //     {
-    //       text: 'Change and Code',
-    //       url: 'https://changeandcode.com/'
-    //     }
-    //   ]
-    // }
   ],
   es: [
-    {
-      date: '2017 - 2022',
-      title: 'Negocio Familiar',
-      body: `Organicé y optimicé el flujo de trabajo para la edición de fotos. Desarrollé nuevos y más eficientes métodos de gestión de datos. Mejoré la eficiencia al reducir el tiempo de generación de recurso
-       de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
-    },
+    // {
+    //   date: '2017 - 2022',
+    //   title: 'Negocio Familiar',
+    //   body: `Organicé y optimicé el flujo de trabajo para la edición de fotos. Desarrollé nuevos y más eficientes métodos de gestión de datos. Mejoré la eficiencia al reducir el tiempo de generación de recurso
+    //    de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
+    // },
     {
       date: 'Ene - Oct 2024',
       title: 'Desarrollador Fullstack y Móvil',
@@ -282,6 +284,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
           url: 'https://kontigo.lat/'
         }
       ]
+    },
+    {
+      date: 'Dic 2024 - Presente',
+      title: 'Desarrollador Fullstack',
+      body: 'Actualmente trabajando como desarrollador fullstack. Nextjs. Node para el backend, y TailwindCSS para el frontend.'
+      // links: [
+      //   {
+      //     text: 'Change and Code',
+      //     url: 'https://changeandcode.com/'
+      //   }
+      // ]
     }
   ]
 }
@@ -324,7 +337,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - 2023',
       title: 'Oracle Next Education',
-      body: '5th generation alumni of the Oracle Next Education program, where I took the back-end specialty, increasing my knowledge in JavaScript, Java and SQL. Also learning Spring Boot and REST APIs, and various soft skills.',
+      body: '5th generation alumni of the Oracle Next Education program, where I took the back-end specialty, increasing my knowledge in JavaScript, Java and SQL. Also learning Spring Boot and REST APIs.',
       links: [
         {
           text: 'Certificate',
@@ -335,7 +348,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - Present',
       title: 'Computer Science Major',
-      body: "Currently studying Computer Science at Chihuahua's Institute of Technology II (ITCHII). So far, I have strengthened my knowledge in Object-Oriented Programming, Data Structures, and Algorithms."
+      body: "Currently studying Computer Science at Chihuahua's Institute of Technology II (ITCHII). I'm getting the title as a side quest :p"
     }
   ],
   es: [
@@ -375,7 +388,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - 2023',
       title: 'Oracle Next Education',
-      body: 'Alumno de la 5ta generación del programa Oracle Next Education, donde tomé la especialidad de back-end, aumentando mi conocimiento en JavaScript, Java y SQL. También aprendiendo Spring Boot y REST APIs, y varias soft skills.',
+      body: 'Alumno de la 5ta generación del programa Oracle Next Education, donde tomé la especialidad de back-end, aumentando mi conocimiento en JavaScript, Java y SQL. También aprendiendo Spring Boot y REST APIs.',
       links: [
         {
           text: 'Certificado',
@@ -386,7 +399,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - Presente',
       title: 'Ingeniería Informática',
-      body: 'Actualmente estoy estudiando Ingeniería Informática en el Instituto Tecnológico de Chihuahua II (ITCHII). Hasta ahora, he fortalecido mi conocimiento en Programación Orientada a Objetos, Estructuras de Datos, y Algoritmos.'
+      body: 'Actualmente estoy estudiando Ingeniería Informática en el Instituto Tecnológico de Chihuahua II (ITCHII). Me propuse obtener el título como una side quest :p'
     }
   ]
 }
@@ -401,25 +414,25 @@ export const resources: Data<Resource[]> = {
     },
     {
       title: 'Anime and manga',
-      body: 'All my anime and manga list summarized in a Notion page. You can visit it if you want to find some recommendations.',
+      body: 'I know this is kinda weird, but I have a Notion page where I list all the anime and manga I have watched or want to watch. You can visit it if you want to find some recommendations.',
       href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
       imageUrl: 'animanga.jpg'
     },
     {
       title: 'Video Games',
-      body: 'A Notion page listing most of the games I have played.',
+      body: 'I have a Notion page where I list all the games I have played or want to play. You can visit it if you want to find some recommendations or just stalk my taste in games, idk.',
       href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
       imageUrl: 'games.jpg'
     },
     {
       title: 'My Spotify',
-      body: 'I love listening to music, it is probably one of my favorite things in life. You can check my Spotify profile if you want to see my playlists and the music I listen to, I have pretty versatile tastes.',
+      body: "I wouldn't call myself a melomaniac, but yeah... I love listening to music. You can check my Spotify profile if you want to see my playlists and the music I listen to, although I must warn you, my music taste is all over the place.",
       href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
       imageUrl: 'spotify.jpg'
     },
     {
       title: 'neal.fun',
-      body: 'If you are bored, check this page.',
+      body: 'Check this out if you are bored.',
       href: 'https://neal.fun/',
       imageUrl: 'neal.jpg'
     },
@@ -431,7 +444,7 @@ export const resources: Data<Resource[]> = {
     },
     {
       title: 'Brandmark',
-      body: 'Logo generator. Very useful if you need ideas.',
+      body: 'Logo generator. Very useful for getting ideas.',
       href: 'https://brandmark.io/',
       imageUrl: 'brandmark.jpg'
     },
@@ -469,25 +482,25 @@ export const resources: Data<Resource[]> = {
     },
     {
       title: 'Anime y manga',
-      body: 'Toda mi lista de anime y manga resumida en una página de Notion. Puedes visitarla si quieres encontrar alguna recomendación.',
+      body: 'Se que esto es un poco raro, pero tengo una página de Notion con todos los anime y manga que he visto o quiero ver. Puedes visitarla si quieres encontrar alguna recomendación.',
       href: 'https://xskino.notion.site/Kino-s-Animanga-List-c977941f21cc4073ab683ceb8af43766',
       imageUrl: 'animanga.jpg'
     },
     {
       title: 'Videojuegos',
-      body: 'Una página de Notion enlistando la mayoría de juegos que he jugado.',
+      body: 'Tengo una página de Notion con todos los juegos que he jugado o quiero jugar. Puedes visitarla si quieres encontrar alguna recomendación o stalkear a mi gusto en videojuegos, idk.',
       href: 'https://xskino.notion.site/Kino-s-Game-List-f596ae8fc0bb47da80e529084ea3f639?pvs=4',
       imageUrl: 'games.jpg'
     },
     {
       title: 'Mi Spotify',
-      body: 'Me encanta escuchar música, probablemente sea una de mis cosas favoritas en la vida. Puedes ver mi perfil de Spotify si quieres ver mis playlists y la música que escucho, tengo gustos bastante versátiles.',
+      body: 'No me llamaría a mí mismo melómano, pero ajá... Me encanta escuchar música. Puedes ver mi perfil de Spotify si quieres ver mis playlists y la música que escucho, aunque debo advertirte, no hay una pizca de coherencia ahí.',
       href: 'https://open.spotify.com/user/eg2bpwh66ybm3zjtwaj1c7t91?si=043e11b4e6a448b1',
       imageUrl: 'spotify.jpg'
     },
     {
       title: 'neal.fun',
-      body: 'Si estás aburrido, revisa esta página.',
+      body: 'Chequea esto si estás aburrido.',
       href: 'https://neal.fun/',
       imageUrl: 'neal.jpg'
     },
