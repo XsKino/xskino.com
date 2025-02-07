@@ -127,13 +127,8 @@ dist
 .pnp.*
 
 # Others
-
 .psd
 
-# lockfiles
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
 # vercel
 .vercel
