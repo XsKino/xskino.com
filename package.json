@@ -25,7 +25,7 @@
     "@types/react-dom": "^18.2.18",
     "astro": "^4.0.9",
     "flag-icons": "^7.1.0",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^12.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.53.1",
