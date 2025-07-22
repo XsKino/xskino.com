@@ -4962,7 +4962,7 @@ eslint-compat-utils@^0.5.1:
   dependencies:
     semver "^7.5.4"
 
-eslint-config-astro@^2.1.1:
+eslint-config-astro@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/eslint-config-astro/-/eslint-config-astro-1.0.8.tgz#24588e5a6b92a57e35149e7812716fb0cb00ffc1"
   integrity sha512-1zRighfKj5YLvAxFgqsWkkpzmqxeUe3bX+C0stJ022U2MGsl4YMPjTqC2/fo5bpI3TOJz7/Z7m7zDTKMLX+ksA==

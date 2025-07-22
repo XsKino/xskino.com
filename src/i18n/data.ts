@@ -178,6 +178,28 @@ export const projects: Data<ProjectSet> = {
   es: {
     main: [
       {
+        name: 'Web Lab',
+        brief: 'Colección de Mini-proyectos',
+        description: `
+        Colección de mini proyectos de front-end.
+        `,
+        image: 'web-lab.webp',
+        github: 'https://github.com/XsKino/web-lab',
+        link: 'https://xs-web-lab.vercel.app/',
+        technologies: ['Astro', 'React', 'TailwindCSS']
+      },
+      {
+        name: 'KepTrack',
+        brief: 'Control de Gastos',
+        description: `
+        Herramienta de control de gastos para tus gastos recurrentes. Con KepTrack puedes llevar un control de tus gastos mensuales y anuales, además de poder ver tus gastos por categoría.
+        `,
+        image: 'keptrack.webp',
+        technologies: ['TypeScript', 'Nextjs', 'TailwindCSS'],
+        link: 'https://keptrack.com'
+      },
+
+      {
         name: 'Gori',
         brief: 'AI Game Master',
         description: `Game Master potenciado por IA para juegos de rol de mesa.`,
@@ -185,18 +207,9 @@ export const projects: Data<ProjectSet> = {
         github: 'https://github.com/XsKino/gori',
         link: 'https://gori-ai.vercel.app/',
         technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
-      },
-      {
-        name: 'Web Lab',
-        brief: 'Colección de Mini-proyectos',
-        description: `
-        Inspirado por el reto de 50 Días 50 Proyectos, decidí crear un sitio web con una colección de experimentos web donde puedes ver lo que es posible hacer con las tecnologías web.
-        `,
-        image: 'web-lab.webp',
-        github: 'https://github.com/XsKino/web-lab',
-        link: 'https://xs-web-lab.vercel.app/',
-        technologies: ['Astro', 'React', 'TailwindCSS']
-      },
+      }
+    ],
+    other: [
       {
         name: 'Refuzzed',
         brief: 'NFT Marketplace',
@@ -205,9 +218,7 @@ export const projects: Data<ProjectSet> = {
         github: 'https://github.com/XsKino/refuzzed',
         link: 'https://refuzzed.vercel.app/',
         technologies: ['Solana', 'Nextjs', 'TailwindCSS']
-      }
-    ],
-    other: [
+      },
       {
         name: 'xs convert',
         brief: 'Conversor de monedas',
@@ -238,12 +249,6 @@ export const projects: Data<ProjectSet> = {
 
 export const jobsTimeline: Data<TimelineItem[]> = {
   en: [
-    // {
-    //   date: '2017 - 2022',
-    //   title: 'Family Business',
-    //   body: `Organized and optimized workflow for photo editing. Developed new and more efficient methods of data management. Improved efficiency by reducing asset generation time from 1 week to a couple
-    //   of hours, by coding bva macros to create automatic powepoint slides.`
-    // },
     {
       date: 'Jan - Oct 2024',
       title: 'Fullstack & Mobile Developer',
@@ -255,25 +260,30 @@ export const jobsTimeline: Data<TimelineItem[]> = {
         }
       ]
     },
+    // {
+    //   date: '2024 - Present',
+    //   title: 'Indie Maker',
+    //   body: `indie maker tal weu weu.`,
+    //   links: [
+    //     {
+    //       text: 'keptrack',
+    //       url: 'https://keptrack.com/'
+    //     }
+    //   ]
+    // },
     {
-      date: 'Dec 2024 - Present',
+      date: 'Dec 2024 - Jul 2025',
       title: 'Fullstack Developer',
-      body: 'Currently working as a fullstack developer. I use Nextjs. Node for the backend, and TailwindCSS for the frontend.'
-      // links: [
-      //   {
-      //     text: 'Change and Code',
-      //     url: 'https://changeandcode.com/'
-      //   }
-      // ]
+      body: 'Lead full stack developer, responsible for implementing multiple features, system architecture, and UI/UX design at Vendex, a technology company focused on sales assistance solutions for businesses.',
+      links: [
+        {
+          text: 'Vendex',
+          url: 'https://vendex.mx/'
+        }
+      ]
     }
   ],
   es: [
-    // {
-    //   date: '2017 - 2022',
-    //   title: 'Negocio Familiar',
-    //   body: `Organicé y optimicé el flujo de trabajo para la edición de fotos. Desarrollé nuevos y más eficientes métodos de gestión de datos. Mejoré la eficiencia al reducir el tiempo de generación de recurso
-    //    de 1 semana a un par de horas, codificando macros de Excel en bva para crear diapositivas de powepoint automáticamente.`
-    // },
     {
       date: 'Ene - Oct 2024',
       title: 'Desarrollador Fullstack y Móvil',
@@ -285,16 +295,27 @@ export const jobsTimeline: Data<TimelineItem[]> = {
         }
       ]
     },
+    // {
+    //   date: '2024 - Present',
+    //   title: 'Indie Maker',
+    //   body: `indie maker tal weu weu.`,
+    //   links: [
+    //     {
+    //       text: 'keptrack',
+    //       url: 'https://keptrack.com/'
+    //     }
+    //   ]
+    // },
     {
-      date: 'Dic 2024 - Presente',
+      date: 'Dic 2024 - Jul 2025',
       title: 'Desarrollador Fullstack',
-      body: 'Actualmente trabajando como desarrollador fullstack. Nextjs. Node para el backend, y TailwindCSS para el frontend.'
-      // links: [
-      //   {
-      //     text: 'Change and Code',
-      //     url: 'https://changeandcode.com/'
-      //   }
-      // ]
+      body: 'Desarrollador full stack principal, encargado de la implementación de múltiples funcionalidades, arquitectura del sistema, y diseño de UI/UX en Vendex, una empresa de tecnología enfocada en soluciones de asistencia de ventas para negocios',
+      links: [
+        {
+          text: 'Vendex',
+          url: 'https://vendex.mx/'
+        }
+      ]
     }
   ]
 }
