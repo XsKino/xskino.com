@@ -128,13 +128,12 @@ export const projects: Data<ProjectSet> = {
         technologies: ['TypeScript', 'Nextjs', 'TailwindCSS']
       },
       {
-        name: 'Gori',
-        brief: 'AI Game Master',
-        description: `AI-Powered Game Master for tabletop RPGs.`,
-        image: 'gori.webp',
-        github: 'https://github.com/XsKino/gori',
-        link: 'https://gori-ai.vercel.app/',
-        technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
+        name: 'Landings',
+        brief: 'Landing page portfolio',
+        description: `Collection of landing pages I've made for multiple projects`,
+        image: 'landings.webp',
+        link: 'https://xskino.com/landings',
+        technologies: ['Astro', 'TailwindCSS', 'React']
       }
     ],
     other: [
@@ -200,13 +199,12 @@ export const projects: Data<ProjectSet> = {
       },
 
       {
-        name: 'Gori',
-        brief: 'AI Game Master',
-        description: `Game Master potenciado por IA para juegos de rol de mesa.`,
-        image: 'gori.webp',
-        github: 'https://github.com/XsKino/gori',
-        link: 'https://gori-ai.vercel.app/',
-        technologies: ['TypeScript', 'Nextjs', 'OpenAI API']
+        name: 'Landings',
+        brief: 'Portafolio de Landing Pages',
+        description: `Colección de landing pages que he hecho para múltiples proyectos`,
+        image: 'landings.webp',
+        link: 'https://xskino.com/landings',
+        technologies: ['Astro', 'TailwindCSS', 'React']
       }
     ],
     other: [

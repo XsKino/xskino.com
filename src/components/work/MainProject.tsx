@@ -24,12 +24,15 @@ export default function MainProject({ class: className, project, labels }: Props
   return (
     <>
       {/* Desktop */}
-      <article
+      <a
+        href={project.link ?? project.github ?? '#'}
+        target='_blank'
         className={`
           hidden md:flex flex-col aspect-square md:aspect-[unset] min-h-fit
           rounded-xl bg-background text-primary selection-primary
           shadow-xl shadow-background/50
-          overflow-hidden ${className}
+          overflow-hidden transition-all ${className}
+          ${project.link || project.github ? 'hover:scale-105' : ''}
           `}>
         <img
           src={`/img/projects/${project.image}`}
@@ -48,11 +51,11 @@ export default function MainProject({ class: className, project, labels }: Props
                   href={project.github}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='opacity-75 hover:opacity-100'>
+                  className='opacity-75 hover:opacity-100 p-4 -m-4'>
                   <GitHubFillIcon />
                 </a>
               )}
-              {project.link != null && (
+              {/* {project.link != null && (
                 <a
                   title={labels.LIVE_PROJECT}
                   href={project.link}
@@ -61,7 +64,7 @@ export default function MainProject({ class: className, project, labels }: Props
                   className='opacity-75 hover:opacity-100'>
                   <ExternalLinkIcon />
                 </a>
-              )}
+              )} */}
             </div>
           </div>
           {typeof project.brief !== 'undefined' && (
@@ -81,7 +84,7 @@ export default function MainProject({ class: className, project, labels }: Props
             </div>
           </div>
         </div>
-      </article>
+      </a>
 
       {/* Mobile */}
       <button
