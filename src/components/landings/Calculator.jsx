@@ -26,7 +26,7 @@ const modules = [
   {
     name: 'base',
     title: 'Landing Page premium',
-    price: 150,
+    price: 300,
     locked: true,
     description:
       'Landing page profesional, con diseño 100% personalizado, hecho a la medida para tu negocio. Optimizado para que aparezca en los primeros lugares de los motores de búsqueda.',
@@ -42,7 +42,7 @@ const modules = [
   {
     name: 'contact-form',
     title: 'Integración con formularios de contacto',
-    price: 40,
+    price: 50,
     description:
       'Los visitantes pueden contactarte directamente desde tu landing page a través de un formulario de contacto.',
     features: [
@@ -61,7 +61,7 @@ const modules = [
   {
     name: 'i18n',
     title: 'Internacionalización',
-    price: 60,
+    price: 180,
     description:
       'Si tu negocio está enfocado a un mercado internacional, esta es tu opción. Te ayudamos a que tu landing page sea multi-idioma y multi-moneda.',
     features: ['Hasta 5 idiomas', 'Hasta 5 monedas']
@@ -69,7 +69,7 @@ const modules = [
   {
     name: 'cms',
     title: 'Gestor de contenido',
-    price: 130,
+    price: 390,
     description:
       'Gestor de contenido para que puedas administrar tu landing page (subir y editar contenido por tu cuenta).'
   },
@@ -88,10 +88,40 @@ const modules = [
   {
     name: 'analytics',
     title: 'Google Analytics',
-    price: 20,
+    price: 60,
     description: 'Integración con Google Analytics para que puedas medir el rendimiento de tu landing page.'
   }
 ]
+
+// Portfolio de landing pages
+const portfolioItems = [
+  {
+    id: 1,
+    name: 'EduLink',
+    description: 'Landing page de muestra para agencia de intercambios',
+    image: '/img/landings/portfolio/edulink.png',
+    link: 'https://landing-showcase.xskino.com',
+    features: ['Testimonios', 'Formulario integrado', 'Diseño moderno']
+  },
+  {
+    id: 2,
+    name: 'Keptrack',
+    description: 'Landing para app de recordatorios',
+    image: '/img/landings/portfolio/keptrack.png',
+    link: 'https://keptrack.com',
+    features: ['Precios', 'Internacionalización']
+  },
+  {
+    id: 3,
+    name: 'xskino.com',
+    description: 'Mi portfolio personal',
+    image: '/img/landings/portfolio/xskino.png',
+    link: 'https://xskino.com/es/',
+    features: ['Formulario de contacto', 'Multi-idioma']
+  }
+]
+
+export { PortfolioSection }
 
 export default function Calculator() {
   const [selectedModules, setSelectedModules] = useState(modules.filter(module => module.locked))
@@ -165,8 +195,9 @@ export default function Calculator() {
                 <span className='text-xs'>USD</span>
               </p>
             </div>
-            <p className='text-[0.01rem] text-gray-500 font-extralight mb-0'>
-              * Este precio puede cambiar en caso de requerir funcionalidades diferentes a las descritas.
+            <p className='text-xs text-gray-600 mb-0 text-center p-2 bg-gray-100 rounded border'>
+              📋 La calculadora de precios es solo una referencia. La cotización final puede variar
+              dependiendo de las circunstancias específicas del proyecto.
             </p>
           </section>
         </div>
@@ -368,5 +399,80 @@ const ContactModal = ({ isOpen, onClose, message }) => {
         )}
       </ModalContent>
     </Modal>
+  )
+}
+
+// Componente Portfolio
+const PortfolioSection = () => {
+  return (
+    <section className='bg-background text-gray-300 py-24'>
+      <div className='container mx-auto px-4'>
+        <div className='space-y-6 mb-16 text-center'>
+          <h2 className='text-4xl font-bold text-foreground'>¿Quieres ver mi trabajo antes de decidir?</h2>
+          <p className='text-xl text-balance max-w-3xl mx-auto'>
+            Es natural querer ver resultados antes de invertir. Estos proyectos te darán una idea clara de mi
+            estilo y calidad.
+          </p>
+        </div>
+
+        <div className='grid md:grid-cols-2 gap-12'>
+          {portfolioItems.map(item => (
+            <PortfolioCard key={item.id} {...item} />
+          ))}
+        </div>
+
+        <div className='text-center mt-12 space-y-8'>
+          <p>¿Te gusta lo que ves? ¡Trabajemos juntos!</p>
+          <button
+            onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
+            className='bg-foreground text-background px-8 py-3 rounded-lg font-bold hover:bg-foreground/80 transition-all'>
+            Empezar mi proyecto
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Componente individual del portfolio
+const PortfolioCard = ({ name, description, image, link, features }) => {
+  return (
+    <a
+      href={link}
+      target='_blank'
+      rel='noopener noreferrer'
+      className='group block relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+      {/* Background image */}
+      <div className='aspect-video overflow-hidden'>
+        <img
+          src={image}
+          alt={name}
+          className='w-full h-full object-cover duration-500 group-hover:scale-110 transition-all brightness-[0.3] saturate-150 group-hover:saturate-100 group-hover:brightness-75 group-hover:blur-none'
+        />
+      </div>
+
+      {/* Glassmorphism overlay */}
+      <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300' />
+
+      {/* Content */}
+      <div className='absolute bottom-0 left-0 right-0 p-8 text-white/80'>
+        <h3 className='text-lg font-bold mb-3 group-hover:text-white transition-colors'>{name}</h3>
+        <p className='text-gray-200 mb-6 text-xs leading-relaxed'>{description}</p>
+
+        <div className='flex flex-wrap gap-2'>
+          {features.map((feature, index) => (
+            <span
+              key={index}
+              className='text-[0.6rem] bg-white/10 backdrop-blur-sm text-white px-2 py-1 rounded border border-white/20'>
+              {feature}
+            </span>
+          ))}
+        </div>
+      </div>
+      {/* Hover indicator */}
+      <div className='absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 aspect-square grid place-content-center'>
+        <i className='ph ph-arrow-square-out text-white text-xl'></i>
+      </div>
+    </a>
   )
 }
