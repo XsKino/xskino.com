@@ -138,15 +138,6 @@ export const projects: Data<ProjectSet> = {
     ],
     other: [
       {
-        name: 'Refuzzed',
-        brief: 'NFT Marketplace',
-        description: `NFT Collection marketplace built on Solana. A new gamified experience`,
-        image: 'refuzzed.webp',
-        github: 'https://github.com/XsKino/refuzzed',
-        link: 'https://refuzzed.vercel.app/',
-        technologies: ['Solana', 'Nextjs', 'TailwindCSS']
-      },
-      {
         name: 'xs convert',
         brief: 'Currency Converter',
         description: `Currency converter built with JavaFX. with this project I got the oportunity to learn how to use JavaFX and how to use APIs in Java.`,
@@ -209,15 +200,6 @@ export const projects: Data<ProjectSet> = {
     ],
     other: [
       {
-        name: 'Refuzzed',
-        brief: 'NFT Marketplace',
-        description: `Marketplace de colecciones NFT construido en Solana. Una nueva experiencia gamificada.`,
-        image: 'refuzzed.webp',
-        github: 'https://github.com/XsKino/refuzzed',
-        link: 'https://refuzzed.vercel.app/',
-        technologies: ['Solana', 'Nextjs', 'TailwindCSS']
-      },
-      {
         name: 'xs convert',
         brief: 'Conversor de monedas',
         description: `Conversor de monedas hecho con JavaFX. Con este proyecto tuve la oportunidad de aprender a usar JavaFX y cómo usar APIs en Java.`,
@@ -279,6 +261,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
           url: 'https://vendex.mx/'
         }
       ]
+    },
+    {
+      date: 'Jan 2026 - Present',
+      title: 'Backend Developer',
+      body: 'Currently working as a backend developer at Kiuey, mantaining and adding new features in a Rails codebase.',
+      links: [
+        {
+          text: 'Kiuey',
+          url: 'https://kiuey.com/'
+        }
+      ]
     }
   ],
   es: [
@@ -312,6 +305,17 @@ export const jobsTimeline: Data<TimelineItem[]> = {
         {
           text: 'Vendex',
           url: 'https://vendex.mx/'
+        }
+      ]
+    },
+    {
+      date: 'Ene 2026 - Presente',
+      title: 'Desarrollador Backend',
+      body: 'Actualmente trabajando como desarrollador backend en Kiuey, manteniendo y agregando nuevas funcionalidades en una codebase de Rails.',
+      links: [
+        {
+          text: 'Kiuey',
+          url: 'https://kiuey.com/'
         }
       ]
     }
@@ -367,7 +371,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - Present',
       title: 'Computer Science Major',
-      body: "Currently studying Computer Science at Chihuahua's Institute of Technology II (ITCHII). I'm getting the title as a side quest :p"
+      body: "Currently studying Computer Science at Chihuahua's Institute of Technology II (ITCHII)."
     }
   ],
   es: [
@@ -418,7 +422,7 @@ export const educationTimeline: Data<TimelineItem[]> = {
     {
       date: '2022 - Presente',
       title: 'Ingeniería Informática',
-      body: 'Actualmente estoy estudiando Ingeniería Informática en el Instituto Tecnológico de Chihuahua II (ITCHII). Me propuse obtener el título como una side quest :p'
+      body: 'Actualmente estoy estudiando Ingeniería Informática en el Instituto Tecnológico de Chihuahua II (ITCHII).'
     }
   ]
 }
